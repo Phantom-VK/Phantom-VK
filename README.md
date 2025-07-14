@@ -74,6 +74,6 @@ Final year IT student passionate about building scalable systems, solving real-w
 [![Resume](https://img.shields.io/badge/Resume-FFD43B?style=flat&logo=readthedocs&logoColor=black)](https://drive.google.com/drive/folders/1izi_woduWACltXpALTIlfUNDmbEKJurJ?usp=sharing)
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Phantom-VK&show_icons=true&theme=radical" alt="GitHub Stats" width="48%"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Phantom-VK&theme=radical" alt="GitHub Streak" width="48%"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=phantom-vk&show_icons=true&theme=radical" alt="GitHub Stats" width="48%"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=phantom-vk&theme=radical" alt="GitHub Streak" width="48%"/>
 </p>
