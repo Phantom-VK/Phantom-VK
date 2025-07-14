@@ -1,8 +1,5 @@
 # 👋 Hey there, I'm Vikramaditya Khupse
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/phantom-vk/phantom-vk/main/LinkedIn%20cover%20-%201(1).png" alt="Banner" width="100%"/>
-</p>
 
 ## 🚀 Machine Learning Engineer | Full-Stack Developer | Cloud Enthusiast
 
