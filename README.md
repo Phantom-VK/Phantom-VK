@@ -1,7 +1,7 @@
 # 👋 Hey there, I'm Vikramaditya Khupse
 
 
-## 🚀 Machine Learning Engineer | Full-Stack Developer | Cloud Enthusiast
+## 🚀 IT Student | Full-Stack Developer | AI-ML-DL Enthusiast
 
 Final year IT student passionate about building scalable systems, solving real-world problems with AI/ML, and crafting clean, efficient code. I thrive in fast-paced environments where I can leverage my diverse technical skills to create impactful solutions.
 
@@ -35,8 +35,7 @@ Final year IT student passionate about building scalable systems, solving real-w
 - 🏆 **PSB IDEA Hackathon 2025 Winner** - Union Bank of India
 - 🚀 Developed **HR Chacha** - AI hiring assistant improving screening efficiency by 60%
 - 🔍 Built **Phishing Detection ML Pipeline** with 97% accuracy on AWS
-- 💡 **Vice President** of SWAG Developers Club, mentoring 20+ students
-- 🛠️ Passion for **clean code** and **scalable system design**
+- 💡 **Vice President** of SWAG Developers Club & Co Organizer at GDG on Campus SGGSIE&T
 
 ### 🔥 Featured Projects
 
@@ -69,12 +68,12 @@ Final year IT student passionate about building scalable systems, solving real-w
 
 ### 📫 Let's Connect
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](your-linkedin-link)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vikramaditya-khupse-04838a259/)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:vikramadityakhupse@gmail.com)
 [![Portfolio](https://img.shields.io/badge/Portfolio-4285F4?style=flat&logo=googlechrome&logoColor=white)](https://phantom-vk.github.io/MyPortfolio)
-[![Resume](https://img.shields.io/badge/Resume-FFD43B?style=flat&logo=readthedocs&logoColor=black)](#)
+[![Resume](https://img.shields.io/badge/Resume-FFD43B?style=flat&logo=readthedocs&logoColor=black)](https://drive.google.com/drive/folders/1izi_woduWACltXpALTIlfUNDmbEKJurJ?usp=sharing)
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=phantom-vk&show_icons=true&theme=radical" alt="GitHub Stats" width="48%"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=phantom-vk&theme=radical" alt="GitHub Streak" width="48%"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=Phantom-VK&show_icons=true&theme=radical" alt="GitHub Stats" width="48%"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Phantom-VK&theme=radical" alt="GitHub Streak" width="48%"/>
 </p>
