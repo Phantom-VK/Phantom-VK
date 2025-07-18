@@ -3,8 +3,11 @@
 
 ## 🚀 IT Student | Full-Stack Developer | AI-ML-DL Enthusiast
 
-Final year IT student passionate about building scalable systems, solving real-world problems with AI/ML, and crafting clean, efficient code. I thrive in fast-paced environments where I can leverage my diverse technical skills to create impactful solutions.
+Final year IT student & full-time computer geek. Coding isn’t just a career path—it’s my daily habit, passion, and hobby.
 
+Built everything from Android and desktop apps to ML pipelines, chatbots, and backend systems using Spring Boot and Kafka. Not tied to any stack—if it runs on silicon, I’ll build on it.
+
+Led 2 tech clubs, mentored 40+ juniors, and thrived under pressure. Goal? Become a world-class engineer, solving real problems at scale
 ### 🔧 Technical Stack
 
 **Languages:**  
@@ -35,6 +38,7 @@ Final year IT student passionate about building scalable systems, solving real-w
 - 🏆 **PSB IDEA Hackathon 2025 Winner** - Union Bank of India
 - 🚀 Developed **HR Chacha** - AI hiring assistant improving screening efficiency by 60%
 - 🔍 Built **Phishing Detection ML Pipeline** with 97% accuracy on AWS
+- 🚀 Developed more than 5 Android and Desktop Apps
 - 💡 **Vice President** of SWAG Developers Club & Co Organizer at GDG on Campus SGGSIE&T
 
 ### 🔥 Featured Projects
@@ -74,6 +78,5 @@ Final year IT student passionate about building scalable systems, solving real-w
 [![Resume](https://img.shields.io/badge/Resume-FFD43B?style=flat&logo=readthedocs&logoColor=black)](https://drive.google.com/drive/folders/1izi_woduWACltXpALTIlfUNDmbEKJurJ?usp=sharing)
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=phantom-vk&show_icons=true&theme=radical" alt="GitHub Stats" width="48%"/>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=phantom-vk&theme=radical" alt="GitHub Streak" width="48%"/>
 </p>
