@@ -48,7 +48,7 @@ Led 2 tech clubs, mentored 40+ juniors, and thrived under pressure. Goal? Become
     <td width="50%">
       <h3>HR Chacha - AI Hiring Assistant</h3>
       <p>LLM-powered chatbot automating candidate screening with MongoDB and AWS</p>
-      <a href="https://github.com/phantom-vk/HR-Chacha">View Project →</a>
+      <a href="https://github.com/phantom-vk/HRChacha">View Project →</a>
     </td>
     <td width="50%">
       <h3>Banking Microservice</h3>
