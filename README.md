@@ -60,7 +60,7 @@ Led 2 tech clubs, mentored 40+ juniors, and thrived under pressure. Goal? Become
     <td width="50%">
       <h3>Phishing Detection Pipeline</h3>
       <p>End-to-end ML pipeline with 97% accuracy deployed on AWS</p>
-      <a href="https://github.com/phantom-vk/Phishing-Detection-ML">View Project →</a>
+      <a href="https://github.com/phantom-vk/MLOPS-Network-Security-System">View Project →</a>
     </td>
     <td width="50%">
       <h3>Vyom Assist (Hackathon Winner)</h3>
