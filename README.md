@@ -79,5 +79,5 @@ Led 2 tech clubs, mentored 40+ juniors, and thrived under pressure. Goal? Become
 
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=phantom-vk&theme=radical" alt="GitHub Streak" width="48%"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=phantom-vk&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact")
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=phantom-vk&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact" width="48%"/>
 </p>
