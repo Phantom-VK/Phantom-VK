@@ -78,6 +78,6 @@ Led 2 tech clubs, mentored 40+ juniors, and thrived under pressure. Goal? Become
 [![Resume](https://img.shields.io/badge/Resume-FFD43B?style=flat&logo=readthedocs&logoColor=black)](https://drive.google.com/drive/folders/1izi_woduWACltXpALTIlfUNDmbEKJurJ?usp=sharing)
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Phantom-VK" alt="GitHub Streak" width="48%"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Phantom-VK&theme=dark" alt="GitHub Streak" width="48%"/>
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Phantom-VK&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact" width="35%"/>
 </p>
