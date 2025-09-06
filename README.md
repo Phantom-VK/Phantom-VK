@@ -68,6 +68,13 @@ Led 2 tech clubs, mentored 40+ juniors, and thrived under pressure. Goal? Become
       <a href="https://github.com/phantom-vk/Vyom-Assist">View Project →</a>
     </td>
   </tr>
+  <tr>
+    <td width="50%">
+      <h3>AgentTuring - Mathematics AI Agent</h3>
+      <p>An Agentic AI to solve Math problems (RAG + MCP)</p>
+      <a href="https://github.com/Phantom-VK/AgentTuring">View Project →</a>
+    </td>
+  </tr>
 </table>
 
 ### 📫 Let's Connect
