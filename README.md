@@ -58,9 +58,9 @@ Led 2 tech clubs, mentored 40+ juniors, and thrived under pressure. Goal? Become
   </tr>
   <tr>
     <td width="50%">
-      <h3>Phishing Detection Pipeline</h3>
-      <p>End-to-end ML pipeline with 97% accuracy deployed on AWS</p>
-      <a href="https://github.com/phantom-vk/MLOPS-Network-Security-System">View Project →</a>
+      <h3>AgentTuring - Mathematics AI Agent</h3>
+      <p>An Agentic AI to solve Math problems (RAG + MCP)</p>
+      <a href="https://github.com/Phantom-VK/AgentTuring">View Project →</a>
     </td>
     <td width="50%">
       <h3>Vyom Assist (Hackathon Winner)</h3>
@@ -68,12 +68,13 @@ Led 2 tech clubs, mentored 40+ juniors, and thrived under pressure. Goal? Become
       <a href="https://github.com/phantom-vk/Vyom-Assist">View Project →</a>
     </td>
   </tr>
-  <tr>
-    <td width="50%">
-      <h3>AgentTuring - Mathematics AI Agent</h3>
-      <p>An Agentic AI to solve Math problems (RAG + MCP)</p>
-      <a href="https://github.com/Phantom-VK/AgentTuring">View Project →</a>
+  <td width="50%">
+      <h3>Phishing Detection Pipeline</h3>
+      <p>End-to-end ML pipeline with 97% accuracy deployed on AWS</p>
+      <a href="https://github.com/phantom-vk/MLOPS-Network-Security-System">View Project →</a>
     </td>
+  <tr>
+    
   </tr>
 </table>
 
