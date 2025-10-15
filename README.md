@@ -3,12 +3,11 @@
 
 ## 🚀 IT Student | Full-Stack Developer | AI-ML-DL Enthusiast
 
-Final year IT student & full-time computer geek. Coding isn’t just a career path—it’s my daily habit, passion, and hobby.
+Associate Software Engineer (DevOps) at Better Software and pursuing a Bachelor's Degree in Information Technology. Working towards scalable cloud infrastructure design, CI/CD pipelines, and automation for stable software release.
 
-Built everything from Android and desktop apps to ML pipelines, chatbots, and backend systems using Spring Boot and Kafka. Not tied to any stack—if it runs on silicon, I’ll build on it.
+I am a devoted computer engineer fascinated by everything related to computers and programming. I have hands-on experience developing Android and desktop applications, building ML/DL projects with cloud deployments, and creating backend using Java + Python. I’ve led technical clubs, won as well as organized hackathons, and continuously aim to grow into a world-class engineer solving diverse real-world challenges.
 
-Led 2 tech clubs, mentored 40+ juniors, and thrived under pressure. Goal? Become a world-class engineer, solving real problems at scale
-
+It's a hobby and a passion, more than a career choice.
 
 ### 🔧 Technical Stack
 **Languages:**  
