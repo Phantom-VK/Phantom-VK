@@ -97,8 +97,4 @@ It's a hobby and a passion, more than a career choice.
 [![Portfolio](https://img.shields.io/badge/Portfolio-4285F4?style=flat&logo=googlechrome&logoColor=white)](https://phantom-vk.github.io/MyPortfolio)
 [![Resume](https://img.shields.io/badge/Resume-FFD43B?style=flat&logo=readthedocs&logoColor=black)](https://drive.google.com/drive/folders/1izi_woduWACltXpALTIlfUNDmbEKJurJ?usp=sharing)
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Phantom-VK&show_icons=true" alt="Github Stats" width="33%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Phantom-VK&hide_border=false&include_all_commits=true&count_private=true&layout=compact" width="30%"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Phantom-VK" alt="GitHub Streak" width="35%"/>
-</p>
+![Vikram's GitHub stats](https://github-readme-stats.vercel.app/api?username=phantom-vk&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)
