@@ -1,5 +1,7 @@
 # 👋 Hey there, I'm Vikramaditya Khupse
 
+[![Vikram's GitHub stats](https://github-readme-stats.vercel.app/api?username=phantom-vk)](https://github.com/anuraghazra/github-readme-stats)
+
 
 ## 🚀 IT Student | Full-Stack Developer | AI-ML-DL Enthusiast
 
@@ -96,5 +98,3 @@ It's a hobby and a passion, more than a career choice.
 [![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:vikramadityakhupse@gmail.com)
 [![Portfolio](https://img.shields.io/badge/Portfolio-4285F4?style=flat&logo=googlechrome&logoColor=white)](https://phantom-vk.github.io/MyPortfolio)
 [![Resume](https://img.shields.io/badge/Resume-FFD43B?style=flat&logo=readthedocs&logoColor=black)](https://drive.google.com/drive/folders/1izi_woduWACltXpALTIlfUNDmbEKJurJ?usp=sharing)
-
-[![Vikram's GitHub stats](https://github-readme-stats.vercel.app/api?username=phantom-vk)](https://github.com/anuraghazra/github-readme-stats)
