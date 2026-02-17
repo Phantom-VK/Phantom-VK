@@ -27,7 +27,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: top-langs
-          options: username=phantom-vk&layout=compact
+          options: username=phantom-vk&show_icons=true&theme=github_dark&hide=issues
           path: profile/top-langs.svg
           token: ${{ secrets.GH_TOKEN }}
 
