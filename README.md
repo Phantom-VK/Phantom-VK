@@ -1,6 +1,8 @@
 # 👋 Hey there, I'm Vikramaditya Khupse
 
-[![Vikram's GitHub stats](https://github-readme-stats.vercel.app/api?username=phantom-vk)](https://github.com/anuraghazra/github-readme-stats)
+![Stats](./profile/stats.svg)
+![Languages](./profile/top-langs.svg)
+
 
 
 ## 🚀 IT Student | Full-Stack Developer | AI-ML-DL Enthusiast
