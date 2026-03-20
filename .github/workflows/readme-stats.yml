@@ -21,8 +21,8 @@ jobs:
 
       - name: Generate stats from in-repo backend
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GITHUB_STATS_USERNAME: phantom-vk
+          GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
+          GITHUB_STATS_USERNAME: Phantom-VK
           GITHUB_STATS_INCLUDE_ALL_COMMITS: "true"
           GITHUB_STATS_TOP_LANGS_COUNT: "6"
         run: node scripts/generate-readme-stats.mjs
