@@ -25,6 +25,27 @@ const TOP_LANGUAGES_QUERY = `
   }
 `;
 
+const LANGUAGE_ALIASES = Object.freeze({
+  "Jupyter Notebook": {
+    name: "Python",
+    color: "#3572A5"
+  }
+});
+
+function normalizeLanguage(language) {
+  const alias = LANGUAGE_ALIASES[language.name];
+
+  if (!alias) {
+    return language;
+  }
+
+  return {
+    ...language,
+    name: alias.name,
+    color: alias.color || language.color
+  };
+}
+
 async function fetchTopLanguages(username, options = {}) {
   const languageTotals = new Map();
   let hasNextPage = true;
@@ -44,18 +65,22 @@ async function fetchTopLanguages(username, options = {}) {
       }
 
       for (const edge of repo.languages.edges) {
-        const current = languageTotals.get(edge.node.name) || {
+        const normalized = normalizeLanguage({
           name: edge.node.name,
-          color: edge.node.color || "#8b949e",
+          color: edge.node.color || "#8b949e"
+        });
+        const current = languageTotals.get(normalized.name) || {
+          name: normalized.name,
+          color: normalized.color || "#8b949e",
           size: 0
         };
 
         current.size += edge.size;
-        if (!current.color && edge.node.color) {
-          current.color = edge.node.color;
+        if (!current.color && normalized.color) {
+          current.color = normalized.color;
         }
 
-        languageTotals.set(edge.node.name, current);
+        languageTotals.set(normalized.name, current);
       }
     }
 
