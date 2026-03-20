@@ -32,6 +32,21 @@ function buildSvgDocument({ width, height, theme, body, title, extraDefs = "" })
       <stop offset="0%" stop-color="${theme.accent}" />
       <stop offset="100%" stop-color="${theme.success}" />
     </linearGradient>
+    <linearGradient id="surface-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="${theme.background}" />
+      <stop offset="100%" stop-color="${theme.panel}" />
+    </linearGradient>
+    <radialGradient id="glow-blue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(${width * 0.18} ${height * 0.12}) rotate(37) scale(${width * 0.38} ${height * 0.52})">
+      <stop stop-color="${theme.accent}" stop-opacity="0.22" />
+      <stop offset="1" stop-color="${theme.accent}" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow-green" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(${width * 0.88} ${height * 0.15}) rotate(140) scale(${width * 0.28} ${height * 0.4})">
+      <stop stop-color="${theme.success}" stop-opacity="0.18" />
+      <stop offset="1" stop-color="${theme.success}" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid-pattern" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M22 0H0V22" fill="none" stroke="${theme.border}" stroke-opacity="0.18" />
+    </pattern>
     ${extraDefs}
   </defs>
   <style>
@@ -40,8 +55,12 @@ function buildSvgDocument({ width, height, theme, body, title, extraDefs = "" })
     .value { fill: ${theme.text}; font: 700 18px 'Segoe UI', Ubuntu, Sans-Serif; }
     .meta { fill: ${theme.muted}; font: 500 12px 'Segoe UI', Ubuntu, Sans-Serif; }
     .small { fill: ${theme.muted}; font: 500 11px 'Segoe UI', Ubuntu, Sans-Serif; }
+    .pill { fill: ${theme.title}; font: 700 10px 'Segoe UI', Ubuntu, Sans-Serif; letter-spacing: 0.12em; text-transform: uppercase; }
   </style>
-  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="16" fill="${theme.background}" stroke="${theme.border}" />
+  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="18" fill="url(#surface-gradient)" stroke="${theme.border}" />
+  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="18" fill="url(#grid-pattern)" opacity="0.35" />
+  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="18" fill="url(#glow-blue)" />
+  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="18" fill="url(#glow-green)" />
   ${body}
 </svg>`;
 }

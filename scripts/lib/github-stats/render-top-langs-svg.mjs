@@ -2,7 +2,7 @@ import { buildSvgDocument, escapeXml, formatPercent } from "./render-shared.mjs"
 
 function renderTopLangsSvg(result, username, theme) {
   const title = `${username}'s Top Languages`;
-  const barWidth = 435;
+  const barWidth = 431;
   let offset = 0;
 
   const segments = result.languages
@@ -16,22 +16,27 @@ function renderTopLangsSvg(result, username, theme) {
 
   const rows = result.languages
     .map((language, index) => {
-      const rowY = 122 + index * 28;
+      const rowY = 154 + index * 40;
       return `
-        <circle cx="34" cy="${rowY - 5}" r="6" fill="${language.color}" />
-        <text x="50" y="${rowY - 1}" class="value" style="font-size:15px;">${escapeXml(language.name)}</text>
-        <text x="455" y="${rowY - 1}" text-anchor="end" class="meta">${formatPercent(language.share)}</text>
+        <g transform="translate(24 ${rowY - 24})">
+          <rect width="447" height="28" rx="10" fill="rgba(13,17,23,0.46)" stroke="rgba(240,246,252,0.06)" />
+          <circle cx="16" cy="14" r="6" fill="${language.color}" />
+          <text x="30" y="18" class="value" style="font-size:14px;">${escapeXml(language.name)}</text>
+          <text x="431" y="18" text-anchor="end" class="meta">${formatPercent(language.share)}</text>
+        </g>
       `;
     })
     .join("");
 
   const body = `
-    <rect x="20" y="20" width="455" height="72" rx="16" fill="${theme.panel}" />
-    <text x="32" y="49" class="title">${escapeXml(title)}</text>
-    <text x="32" y="69" class="meta">Aggregated from your owned public repositories</text>
+    <rect x="20" y="20" width="455" height="106" rx="18" fill="rgba(13,17,23,0.62)" stroke="rgba(240,246,252,0.08)" />
+    <rect x="32" y="34" width="108" height="24" rx="12" fill="url(#accent-gradient)" opacity="0.22" />
+    <text x="86" y="50" text-anchor="middle" class="pill">Languages</text>
+    <text x="32" y="84" class="title">${escapeXml(title)}</text>
+    <text x="32" y="104" class="meta">Weighted by language bytes across your owned repositories</text>
 
-    <g transform="translate(30 104)">
-      <rect width="${barWidth}" height="16" rx="8" fill="rgba(255,255,255,0.06)" />
+    <g transform="translate(32 132)">
+      <rect width="${barWidth}" height="18" rx="9" fill="rgba(240,246,252,0.08)" />
       <g clip-path="url(#lang-bar-clip)">
         ${segments}
       </g>
@@ -42,10 +47,10 @@ function renderTopLangsSvg(result, username, theme) {
 
   return buildSvgDocument({
     width: 495,
-    height: 122 + result.languages.length * 28 + 20,
+    height: 154 + result.languages.length * 40 + 24,
     theme,
     title,
-    extraDefs: `<clipPath id="lang-bar-clip"><rect width="${barWidth}" height="16" rx="8" /></clipPath>`,
+    extraDefs: `<clipPath id="lang-bar-clip"><rect width="${barWidth}" height="18" rx="9" /></clipPath>`,
     body
   });
 }
