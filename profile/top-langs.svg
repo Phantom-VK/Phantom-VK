@@ -1,93 +1,255 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="430" height="306" viewBox="0 0 430 306" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Phantom-VK&apos;s Top Languages</title>
-  <desc id="desc">Phantom-VK&apos;s Top Languages</desc>
+<svg
+  width="320"
+  height="345"
+  viewBox="0 0 320 345"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-labelledby="titleId descId"
+>
+  <title id="titleId">Phantom-VK&apos;s Top Languages</title>
+  <desc id="descId">Phantom-VK&apos;s Top Languages</desc>
+
   <defs>
-    <linearGradient id="accent-gradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#58a6ff" />
-      <stop offset="100%" stop-color="#3fb950" />
-    </linearGradient>
-    <linearGradient id="surface-gradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0d1117" />
-      <stop offset="100%" stop-color="#161b22" />
-    </linearGradient>
-    <radialGradient id="glow-blue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(77.39999999999999 36.72) rotate(37) scale(163.4 159.12)">
-      <stop stop-color="#58a6ff" stop-opacity="0.14" />
-      <stop offset="1" stop-color="#58a6ff" stop-opacity="0" />
+    <radialGradient id="ambient-glow" cx="0" cy="0" r="1"
+      gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(0 0) scale(256 380)">
+      <stop offset="0%"   stop-color="#58a6ff" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0"    />
     </radialGradient>
-    <radialGradient id="glow-green" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(378.4 45.9) rotate(140) scale(120.4 122.4)">
-      <stop stop-color="#3fb950" stop-opacity="0.12" />
-      <stop offset="1" stop-color="#3fb950" stop-opacity="0" />
-    </radialGradient>
-    <clipPath id="lang-bar-clip"><rect width="382" height="12" rx="6" /></clipPath>
-  </defs>
-  <style>
-    .title { fill: #f0f6fc; font: 700 18px 'Segoe UI', Ubuntu, Sans-Serif; }
-    .label { fill: #8b949e; font: 600 10px 'Segoe UI', Ubuntu, Sans-Serif; letter-spacing: 0.08em; text-transform: uppercase; }
-    .value { fill: #c9d1d9; font: 700 15px 'Segoe UI', Ubuntu, Sans-Serif; }
-    .meta { fill: #8b949e; font: 500 11px 'Segoe UI', Ubuntu, Sans-Serif; }
-    .small { fill: #8b949e; font: 500 10px 'Segoe UI', Ubuntu, Sans-Serif; }
-    .pill { fill: #f0f6fc; font: 700 9px 'Segoe UI', Ubuntu, Sans-Serif; letter-spacing: 0.12em; text-transform: uppercase; }
-  </style>
-  <rect x="0.5" y="0.5" width="429" height="305" rx="18" fill="url(#surface-gradient)" stroke="#30363d" />
-  <rect x="0.5" y="0.5" width="429" height="305" rx="18" fill="url(#glow-blue)" />
-  <rect x="0.5" y="0.5" width="429" height="305" rx="18" fill="url(#glow-green)" />
-  
-    <rect x="16" y="16" width="398" height="68" rx="16" fill="rgba(13,17,23,0.56)" stroke="rgba(240,246,252,0.08)" />
-    <rect x="28" y="28" width="86" height="20" rx="10" fill="url(#accent-gradient)" opacity="0.2" />
-    <text x="71" y="41" text-anchor="middle" class="pill">Languages</text>
-    <text x="28" y="64" class="title">Top Languages</text>
-    <text x="28" y="78" class="meta">Phantom-VK • owned repos</text>
-
-    <g transform="translate(24 96)">
-      <rect width="382" height="12" rx="6" fill="rgba(240,246,252,0.08)" />
-      <g clip-path="url(#lang-bar-clip)">
-        <rect x="0.00" y="0" width="258.74" height="16" fill="#3572A5" /><rect x="258.74" y="0" width="66.93" height="16" fill="#A97BFF" /><rect x="325.68" y="0" width="16.59" height="16" fill="#b07219" /><rect x="342.27" y="0" width="16.26" height="16" fill="#e34c26" /><rect x="358.52" y="0" width="8.71" height="16" fill="#f1e05a" /><rect x="367.24" y="0" width="6.00" height="16" fill="#3178c6" />
-      </g>
-    </g>
-
     
-        <g transform="translate(16 118)">
-          <rect width="398" height="22" rx="9" fill="rgba(13,17,23,0.44)" stroke="rgba(240,246,252,0.06)" />
-          <circle cx="14" cy="11" r="5" fill="#3572A5" />
-          <text x="28" y="15" class="meta" style="fill:#c9d1d9;">Python</text>
-          <text x="382" y="15" text-anchor="end" class="small">68%</text>
-        </g>
-      
-        <g transform="translate(16 148)">
-          <rect width="398" height="22" rx="9" fill="rgba(13,17,23,0.44)" stroke="rgba(240,246,252,0.06)" />
-          <circle cx="14" cy="11" r="5" fill="#A97BFF" />
-          <text x="28" y="15" class="meta" style="fill:#c9d1d9;">Kotlin</text>
-          <text x="382" y="15" text-anchor="end" class="small">18%</text>
-        </g>
-      
-        <g transform="translate(16 178)">
-          <rect width="398" height="22" rx="9" fill="rgba(13,17,23,0.44)" stroke="rgba(240,246,252,0.06)" />
-          <circle cx="14" cy="11" r="5" fill="#b07219" />
-          <text x="28" y="15" class="meta" style="fill:#c9d1d9;">Java</text>
-          <text x="382" y="15" text-anchor="end" class="small">4.3%</text>
-        </g>
-      
-        <g transform="translate(16 208)">
-          <rect width="398" height="22" rx="9" fill="rgba(13,17,23,0.44)" stroke="rgba(240,246,252,0.06)" />
-          <circle cx="14" cy="11" r="5" fill="#e34c26" />
-          <text x="28" y="15" class="meta" style="fill:#c9d1d9;">HTML</text>
-          <text x="382" y="15" text-anchor="end" class="small">4.3%</text>
-        </g>
-      
-        <g transform="translate(16 238)">
-          <rect width="398" height="22" rx="9" fill="rgba(13,17,23,0.44)" stroke="rgba(240,246,252,0.06)" />
-          <circle cx="14" cy="11" r="5" fill="#f1e05a" />
-          <text x="28" y="15" class="meta" style="fill:#c9d1d9;">JavaScript</text>
-          <text x="382" y="15" text-anchor="end" class="small">2.3%</text>
-        </g>
-      
-        <g transform="translate(16 268)">
-          <rect width="398" height="22" rx="9" fill="rgba(13,17,23,0.44)" stroke="rgba(240,246,252,0.06)" />
-          <circle cx="14" cy="11" r="5" fill="#3178c6" />
-          <text x="28" y="15" class="meta" style="fill:#c9d1d9;">TypeScript</text>
-          <text x="382" y="15" text-anchor="end" class="small">1.4%</text>
-        </g>
-      
+  </defs>
+
+  <style>
+    .header {
+      font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+      fill: #58a6ff;
+      animation: fadeIn 0.8s ease-in-out forwards;
+    }
+    @supports (-moz-appearance: auto) { .header { font-size: 15.5px; } }
+
+    .stat {
+      font: 600 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif;
+      fill: #c9d1d9;
+    }
+    @supports (-moz-appearance: auto) { .stat { font-size: 12px; } }
+
+    .bold  { font-weight: 700; }
+    .label { font: 600 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #8b949e; text-transform: uppercase; letter-spacing: 0.07em; }
+    .small { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #8b949e; }
+    .lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #c9d1d9; }
+
+    .rank-text  { font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #c9d1d9; animation: scaleIn 0.3s ease-in-out forwards; }
+    .rank-label { font: 600 9px 'Segoe UI', Ubuntu, Sans-Serif; fill: #8b949e; text-transform: uppercase; letter-spacing: 0.1em; }
+
+    .icon { fill: #58a6ff; display: block; }
+
+    .rank-circle-rim {
+      stroke: #58a6ff; fill: none; stroke-width: 5; opacity: 0.18;
+    }
+    .rank-circle {
+      stroke: #58a6ff;
+      stroke-dasharray: 250;
+      fill: none;
+      stroke-width: 5;
+      stroke-linecap: round;
+      opacity: 0.85;
+      transform-origin: -10px 8px;
+      transform: rotate(-90deg);
+      animation: rankSpin 1s forwards ease-in-out;
+    }
+
+    .stagger { opacity: 0; animation: fadeIn 0.3s ease-in-out forwards; }
+
+    .lang-progress { animation: growWidth 0.6s ease-in-out forwards; }
+    #rect-mask rect { animation: slideIn 1s ease-in-out forwards; }
+
+    @keyframes fadeIn   { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes scaleIn  { from { transform: translate(-5px,5px) scale(0); } to { transform: translate(-5px,5px) scale(1); } }
+    @keyframes rankSpin { from { stroke-dashoffset: 251; } to { stroke-dashoffset: 110; } }
+    @keyframes growWidth { from { width: 0; } to { width: 100%; } }
+    @keyframes slideIn   { from { width: 0; } to { width: calc(100% - 100px); } }
+  </style>
+
+  <!-- Card surface -->
+  <rect x="0.5" y="0.5" rx="8"
+    width="319" height="344"
+    fill="#0d1117"
+    stroke="#30363d" stroke-opacity="0.9"
+  />
+  <!-- Ambient glow overlay -->
+  <rect x="0.5" y="0.5" rx="8"
+    width="319" height="344"
+    fill="url(#ambient-glow)"
+  />
+
   
+  <!-- Title -->
+  <g data-testid="card-title" transform="translate(25, 35)">
+    <text x="0" y="0" class="header" data-testid="header">Most Used Languages</text>
+  </g>
+
+  <!-- Lang rows -->
+  <g data-testid="main-card-body" transform="translate(0, 55)">
+    <svg data-testid="lang-items" x="25">
+      
+  <g transform="translate(0, 0)">
+    <g class="stagger" style="animation-delay: 450ms">
+      <!-- Language name -->
+      <text data-testid="lang-name" x="2" y="15" class="lang-name">Python</text>
+      <!-- Percent right-aligned -->
+      <text x="262" y="15" text-anchor="end" class="lang-name">68%</text>
+
+      <!-- Progress bar -->
+      <svg width="260" x="0" y="22">
+        <!-- Grey track -->
+        <rect rx="4" ry="4" x="0" y="0" width="260" height="7"
+          fill="rgba(255,255,255,0.08)"
+        />
+        <!-- Colored fill, animated -->
+        <svg data-testid="lang-progress" width="175.89">
+          <rect
+            height="7"
+            fill="#3572A5"
+            rx="4" ry="4" x="0" y="0"
+            class="lang-progress"
+            style="animation-delay: 750ms;"
+          />
+        </svg>
+      </svg>
+    </g>
+  </g>
+  <g transform="translate(0, 45)">
+    <g class="stagger" style="animation-delay: 600ms">
+      <!-- Language name -->
+      <text data-testid="lang-name" x="2" y="15" class="lang-name">Kotlin</text>
+      <!-- Percent right-aligned -->
+      <text x="262" y="15" text-anchor="end" class="lang-name">17%</text>
+
+      <!-- Progress bar -->
+      <svg width="260" x="0" y="22">
+        <!-- Grey track -->
+        <rect rx="4" ry="4" x="0" y="0" width="260" height="7"
+          fill="rgba(255,255,255,0.08)"
+        />
+        <!-- Colored fill, animated -->
+        <svg data-testid="lang-progress" width="45.50">
+          <rect
+            height="7"
+            fill="#A97BFF"
+            rx="4" ry="4" x="0" y="0"
+            class="lang-progress"
+            style="animation-delay: 900ms;"
+          />
+        </svg>
+      </svg>
+    </g>
+  </g>
+  <g transform="translate(0, 90)">
+    <g class="stagger" style="animation-delay: 750ms">
+      <!-- Language name -->
+      <text data-testid="lang-name" x="2" y="15" class="lang-name">Java</text>
+      <!-- Percent right-aligned -->
+      <text x="262" y="15" text-anchor="end" class="lang-name">4.3%</text>
+
+      <!-- Progress bar -->
+      <svg width="260" x="0" y="22">
+        <!-- Grey track -->
+        <rect rx="4" ry="4" x="0" y="0" width="260" height="7"
+          fill="rgba(255,255,255,0.08)"
+        />
+        <!-- Colored fill, animated -->
+        <svg data-testid="lang-progress" width="11.28">
+          <rect
+            height="7"
+            fill="#b07219"
+            rx="4" ry="4" x="0" y="0"
+            class="lang-progress"
+            style="animation-delay: 1050ms;"
+          />
+        </svg>
+      </svg>
+    </g>
+  </g>
+  <g transform="translate(0, 135)">
+    <g class="stagger" style="animation-delay: 900ms">
+      <!-- Language name -->
+      <text data-testid="lang-name" x="2" y="15" class="lang-name">HTML</text>
+      <!-- Percent right-aligned -->
+      <text x="262" y="15" text-anchor="end" class="lang-name">4.3%</text>
+
+      <!-- Progress bar -->
+      <svg width="260" x="0" y="22">
+        <!-- Grey track -->
+        <rect rx="4" ry="4" x="0" y="0" width="260" height="7"
+          fill="rgba(255,255,255,0.08)"
+        />
+        <!-- Colored fill, animated -->
+        <svg data-testid="lang-progress" width="11.05">
+          <rect
+            height="7"
+            fill="#e34c26"
+            rx="4" ry="4" x="0" y="0"
+            class="lang-progress"
+            style="animation-delay: 1200ms;"
+          />
+        </svg>
+      </svg>
+    </g>
+  </g>
+  <g transform="translate(0, 180)">
+    <g class="stagger" style="animation-delay: 1050ms">
+      <!-- Language name -->
+      <text data-testid="lang-name" x="2" y="15" class="lang-name">JavaScript</text>
+      <!-- Percent right-aligned -->
+      <text x="262" y="15" text-anchor="end" class="lang-name">2.4%</text>
+
+      <!-- Progress bar -->
+      <svg width="260" x="0" y="22">
+        <!-- Grey track -->
+        <rect rx="4" ry="4" x="0" y="0" width="260" height="7"
+          fill="rgba(255,255,255,0.08)"
+        />
+        <!-- Colored fill, animated -->
+        <svg data-testid="lang-progress" width="6.25">
+          <rect
+            height="7"
+            fill="#f1e05a"
+            rx="4" ry="4" x="0" y="0"
+            class="lang-progress"
+            style="animation-delay: 1350ms;"
+          />
+        </svg>
+      </svg>
+    </g>
+  </g>
+  <g transform="translate(0, 225)">
+    <g class="stagger" style="animation-delay: 1200ms">
+      <!-- Language name -->
+      <text data-testid="lang-name" x="2" y="15" class="lang-name">TypeScript</text>
+      <!-- Percent right-aligned -->
+      <text x="262" y="15" text-anchor="end" class="lang-name">1.4%</text>
+
+      <!-- Progress bar -->
+      <svg width="260" x="0" y="22">
+        <!-- Grey track -->
+        <rect rx="4" ry="4" x="0" y="0" width="260" height="7"
+          fill="rgba(255,255,255,0.08)"
+        />
+        <!-- Colored fill, animated -->
+        <svg data-testid="lang-progress" width="3.59">
+          <rect
+            height="7"
+            fill="#3178c6"
+            rx="4" ry="4" x="0" y="0"
+            class="lang-progress"
+            style="animation-delay: 1500ms;"
+          />
+        </svg>
+      </svg>
+    </g>
+  </g>
+    </svg>
+  </g>
 </svg>
