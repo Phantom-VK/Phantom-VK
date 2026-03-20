@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="495" height="380" viewBox="0 0 495 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<svg width="495" height="482" viewBox="0 0 495 482" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Vikramaditya Khupse&apos;s GitHub Stats</title>
   <desc id="desc">Vikramaditya Khupse&apos;s GitHub Stats</desc>
   <defs>
@@ -7,6 +7,21 @@
       <stop offset="0%" stop-color="#58a6ff" />
       <stop offset="100%" stop-color="#3fb950" />
     </linearGradient>
+    <linearGradient id="surface-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#161b22" />
+    </linearGradient>
+    <radialGradient id="glow-blue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(89.1 57.839999999999996) rotate(37) scale(188.1 250.64000000000001)">
+      <stop stop-color="#58a6ff" stop-opacity="0.22" />
+      <stop offset="1" stop-color="#58a6ff" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow-green" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(435.6 72.3) rotate(140) scale(138.60000000000002 192.8)">
+      <stop stop-color="#3fb950" stop-opacity="0.18" />
+      <stop offset="1" stop-color="#3fb950" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid-pattern" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M22 0H0V22" fill="none" stroke="#30363d" stroke-opacity="0.18" />
+    </pattern>
     
   </defs>
   <style>
@@ -15,84 +30,114 @@
     .value { fill: #c9d1d9; font: 700 18px 'Segoe UI', Ubuntu, Sans-Serif; }
     .meta { fill: #8b949e; font: 500 12px 'Segoe UI', Ubuntu, Sans-Serif; }
     .small { fill: #8b949e; font: 500 11px 'Segoe UI', Ubuntu, Sans-Serif; }
+    .pill { fill: #f0f6fc; font: 700 10px 'Segoe UI', Ubuntu, Sans-Serif; letter-spacing: 0.12em; text-transform: uppercase; }
   </style>
-  <rect x="0.5" y="0.5" width="494" height="379" rx="16" fill="#0d1117" stroke="#30363d" />
+  <rect x="0.5" y="0.5" width="494" height="481" rx="18" fill="url(#surface-gradient)" stroke="#30363d" />
+  <rect x="0.5" y="0.5" width="494" height="481" rx="18" fill="url(#grid-pattern)" opacity="0.35" />
+  <rect x="0.5" y="0.5" width="494" height="481" rx="18" fill="url(#glow-blue)" />
+  <rect x="0.5" y="0.5" width="494" height="481" rx="18" fill="url(#glow-green)" />
   
-    <rect x="20" y="20" width="455" height="64" rx="16" fill="#161b22" />
-    <text x="32" y="48" class="title">Vikramaditya Khupse&apos;s GitHub Stats</text>
-    <text x="32" y="68" class="meta">@Phantom-VK • built from your own GitHub API backend</text>
+    <rect x="20" y="20" width="455" height="104" rx="18" fill="rgba(13,17,23,0.62)" stroke="rgba(240,246,252,0.08)" />
+    <rect x="32" y="34" width="92" height="24" rx="12" fill="url(#accent-gradient)" opacity="0.22" />
+    <text x="78" y="50" text-anchor="middle" class="pill">GitHub Stats</text>
+    <text x="32" y="84" class="title">Vikramaditya Khupse&apos;s GitHub Stats</text>
+    <text x="32" y="104" class="meta">@Phantom-VK • self-hosted card • GitHub dark palette</text>
 
-    <g transform="translate(365 32)">
-      <rect width="88" height="40" rx="20" fill="url(#accent-gradient)" opacity="0.18" />
-      <text x="44" y="17" text-anchor="middle" class="label" style="fill:#f0f6fc">Rank</text>
-      <text x="44" y="31" text-anchor="middle" class="value" style="fill:#f0f6fc; font-size:16px;">B</text>
+    
+    <g transform="translate(387 78)">
+      <circle cx="0" cy="0" r="34" fill="rgba(13,17,23,0.74)" stroke="rgba(240,246,252,0.06)" />
+      <circle cx="0" cy="0" r="34" fill="none" stroke="rgba(88,166,255,0.2)" stroke-width="6" />
+      <circle
+        cx="0"
+        cy="0"
+        r="34"
+        fill="none"
+        stroke="url(#accent-gradient)"
+        stroke-width="6"
+        stroke-linecap="round"
+        stroke-dasharray="213.63"
+        stroke-dashoffset="191.62"
+        transform="rotate(-90 0 0)"
+      />
+      <text x="0" y="-3" text-anchor="middle" style="fill:#f0f6fc; font: 800 22px 'Segoe UI', Ubuntu, Sans-Serif;">B</text>
+      <text x="0" y="15" text-anchor="middle" class="small" style="fill:#8b949e;">10 / 100</text>
     </g>
+  
 
     
-    <g transform="translate(20 98)">
-      <rect width="200" height="52" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.04)" />
-      <rect x="14" y="16" width="10" height="10" rx="3" fill="#d29922" />
-      <text x="34" y="25" class="label">Stars</text>
-      <text x="14" y="42" class="value">22</text>
+    <g transform="translate(20 142)">
+      <rect width="205" height="58" rx="14" fill="rgba(13,17,23,0.5)" stroke="rgba(240,246,252,0.08)" />
+      <rect x="14" y="14" width="24" height="24" rx="8" fill="#d29922" fill-opacity="0.18" />
+      <text x="26" y="30" text-anchor="middle" style="fill:#d29922; font: 700 12px 'Segoe UI', Ubuntu, Sans-Serif;">★</text>
+      <text x="50" y="26" class="label">Stars</text>
+      <text x="14" y="46" class="value">22</text>
     </g>
   
     
-    <g transform="translate(255 98)">
-      <rect width="200" height="52" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.04)" />
-      <rect x="14" y="16" width="10" height="10" rx="3" fill="#58a6ff" />
-      <text x="34" y="25" class="label">Repositories</text>
-      <text x="14" y="42" class="value">54</text>
+    <g transform="translate(250 142)">
+      <rect width="205" height="58" rx="14" fill="rgba(13,17,23,0.5)" stroke="rgba(240,246,252,0.08)" />
+      <rect x="14" y="14" width="24" height="24" rx="8" fill="#58a6ff" fill-opacity="0.18" />
+      <text x="26" y="30" text-anchor="middle" style="fill:#58a6ff; font: 700 12px 'Segoe UI', Ubuntu, Sans-Serif;">▣</text>
+      <text x="50" y="26" class="label">Repositories</text>
+      <text x="14" y="46" class="value">54</text>
     </g>
   
     
-    <g transform="translate(20 158)">
-      <rect width="200" height="52" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.04)" />
-      <rect x="14" y="16" width="10" height="10" rx="3" fill="#3fb950" />
-      <text x="34" y="25" class="label">Pull Requests</text>
-      <text x="14" y="42" class="value">72</text>
+    <g transform="translate(20 210)">
+      <rect width="205" height="58" rx="14" fill="rgba(13,17,23,0.5)" stroke="rgba(240,246,252,0.08)" />
+      <rect x="14" y="14" width="24" height="24" rx="8" fill="#3fb950" fill-opacity="0.18" />
+      <text x="26" y="30" text-anchor="middle" style="fill:#3fb950; font: 700 12px 'Segoe UI', Ubuntu, Sans-Serif;">⇄</text>
+      <text x="50" y="26" class="label">Pull Requests</text>
+      <text x="14" y="46" class="value">72</text>
     </g>
   
     
-    <g transform="translate(255 158)">
-      <rect width="200" height="52" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.04)" />
-      <rect x="14" y="16" width="10" height="10" rx="3" fill="#1f6feb" />
-      <text x="34" y="25" class="label">Issues</text>
-      <text x="14" y="42" class="value">15</text>
-    </g>
-  
-    
-    <g transform="translate(20 218)">
-      <rect width="200" height="52" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.04)" />
-      <rect x="14" y="16" width="10" height="10" rx="3" fill="#58a6ff" />
-      <text x="34" y="25" class="label">Commits</text>
-      <text x="14" y="42" class="value">1.1K</text>
-    </g>
-  
-    
-    <g transform="translate(255 218)">
-      <rect width="200" height="52" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.04)" />
-      <rect x="14" y="16" width="10" height="10" rx="3" fill="#3fb950" />
-      <text x="34" y="25" class="label">Reviews</text>
-      <text x="14" y="42" class="value">33</text>
+    <g transform="translate(250 210)">
+      <rect width="205" height="58" rx="14" fill="rgba(13,17,23,0.5)" stroke="rgba(240,246,252,0.08)" />
+      <rect x="14" y="14" width="24" height="24" rx="8" fill="#1f6feb" fill-opacity="0.18" />
+      <text x="26" y="30" text-anchor="middle" style="fill:#1f6feb; font: 700 12px 'Segoe UI', Ubuntu, Sans-Serif;">!</text>
+      <text x="50" y="26" class="label">Issues</text>
+      <text x="14" y="46" class="value">15</text>
     </g>
   
     
     <g transform="translate(20 278)">
-      <rect width="200" height="52" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.04)" />
-      <rect x="14" y="16" width="10" height="10" rx="3" fill="#d29922" />
-      <text x="34" y="25" class="label">Followers</text>
-      <text x="14" y="42" class="value">4</text>
+      <rect width="205" height="58" rx="14" fill="rgba(13,17,23,0.5)" stroke="rgba(240,246,252,0.08)" />
+      <rect x="14" y="14" width="24" height="24" rx="8" fill="#58a6ff" fill-opacity="0.18" />
+      <text x="26" y="30" text-anchor="middle" style="fill:#58a6ff; font: 700 12px 'Segoe UI', Ubuntu, Sans-Serif;">↺</text>
+      <text x="50" y="26" class="label">Commits</text>
+      <text x="14" y="46" class="value">1.1K</text>
     </g>
   
     
-    <g transform="translate(255 278)">
-      <rect width="200" height="52" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.04)" />
-      <rect x="14" y="16" width="10" height="10" rx="3" fill="#1f6feb" />
-      <text x="34" y="25" class="label">Contributed To</text>
-      <text x="14" y="42" class="value">4</text>
+    <g transform="translate(250 278)">
+      <rect width="205" height="58" rx="14" fill="rgba(13,17,23,0.5)" stroke="rgba(240,246,252,0.08)" />
+      <rect x="14" y="14" width="24" height="24" rx="8" fill="#3fb950" fill-opacity="0.18" />
+      <text x="26" y="30" text-anchor="middle" style="fill:#3fb950; font: 700 12px 'Segoe UI', Ubuntu, Sans-Serif;">✓</text>
+      <text x="50" y="26" class="label">Reviews</text>
+      <text x="14" y="46" class="value">33</text>
+    </g>
+  
+    
+    <g transform="translate(20 346)">
+      <rect width="205" height="58" rx="14" fill="rgba(13,17,23,0.5)" stroke="rgba(240,246,252,0.08)" />
+      <rect x="14" y="14" width="24" height="24" rx="8" fill="#d29922" fill-opacity="0.18" />
+      <text x="26" y="30" text-anchor="middle" style="fill:#d29922; font: 700 12px 'Segoe UI', Ubuntu, Sans-Serif;">◎</text>
+      <text x="50" y="26" class="label">Followers</text>
+      <text x="14" y="46" class="value">4</text>
+    </g>
+  
+    
+    <g transform="translate(250 346)">
+      <rect width="205" height="58" rx="14" fill="rgba(13,17,23,0.5)" stroke="rgba(240,246,252,0.08)" />
+      <rect x="14" y="14" width="24" height="24" rx="8" fill="#1f6feb" fill-opacity="0.18" />
+      <text x="26" y="30" text-anchor="middle" style="fill:#1f6feb; font: 700 12px 'Segoe UI', Ubuntu, Sans-Serif;">↗</text>
+      <text x="50" y="26" class="label">Contributed To</text>
+      <text x="14" y="46" class="value">4</text>
     </g>
   
 
-    <text x="32" y="354" class="small">Score 618 • refresh this card with GitHub Actions on your schedule</text>
+    <rect x="20" y="424" width="455" height="38" rx="12" fill="rgba(13,17,23,0.48)" stroke="rgba(240,246,252,0.06)" />
+    <text x="32" y="447" class="small">Score 618 • refreshes from your own GitHub API workflow</text>
   
 </svg>
