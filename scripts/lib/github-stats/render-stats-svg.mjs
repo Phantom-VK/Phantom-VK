@@ -60,53 +60,23 @@ function renderStatRow({ icon, label, value, rowY, delay, valueX, showLine = tru
   </g>`;
 }
 
-/**
- * renderRankCircle
- * Positioned top-right. Shows the rank level letter + "RANK" label.
- * dashOffset is computed from rank score (0-100): lower = more arc filled.
- *
- * @param {object} stats
- * @param {object} theme
- * @param {number} cx       
- * @param {number} cy    
- */
-function renderRankCircle(stats, theme, cx, cy) {
-  // dashoffset: 251 = empty, 0 = full. Map rank score (higher is better).
-  // Default offset to show ~56% fill (B+ equivalent)
-  const score = stats.rank?.score ?? 56;
-  const dashOffset = (251 - (score / 100) * 251).toFixed(2);
-
+function renderRankBadge(stats, theme, x, y) {
   return `
-  <g data-testid="rank-circle" transform="translate(${cx}, ${cy})">
-    <!-- Rim -->
-    <circle class="rank-circle-rim" cx="0" cy="0" r="40" />
-    <!-- Animated arc -->
-    <circle
-      class="rank-circle"
-      cx="0" cy="0" r="40"
-      style="
-        stroke-dasharray: 251;
-        stroke-dashoffset: ${dashOffset};
-        transform-origin: 0px 0px;
-        transform: rotate(-90deg);
-        animation: rankSpin 1s forwards ease-in-out;
-      "
-    />
-    <!-- Rank letter -->
-    <g class="rank-text">
-      <text x="0" y="0"
-        alignment-baseline="middle"
-        dominant-baseline="middle"
-        text-anchor="middle"
-        data-testid="level-rank-icon"
-        dy="0.06em"
-      >${escapeXml(stats.rank?.level ?? "B+")}</text>
-    </g>
-    <!-- RANK label below letter -->
-    <text x="0" y="18"
+  <g data-testid="rank-badge" transform="translate(${x}, ${y})">
+    <rect width="82" height="88" rx="14" fill="rgba(13,17,23,0.68)" stroke="rgba(88,166,255,0.18)" />
+    <rect x="11" y="10" width="60" height="18" rx="9" fill="rgba(88,166,255,0.12)" />
+    <text x="41" y="22" text-anchor="middle" class="rank-label">Rank</text>
+    <text
+      x="41"
+      y="51"
       text-anchor="middle"
-      class="rank-label"
-    >RANK</text>
+      dominant-baseline="middle"
+      alignment-baseline="middle"
+      data-testid="level-rank-icon"
+      style="fill:${theme.text}; font: 800 28px 'Segoe UI', Ubuntu, Sans-Serif;"
+    >${escapeXml(stats.rank?.level ?? "B+")}</text>
+    <text x="41" y="71" text-anchor="middle" class="small">score</text>
+    <text x="41" y="82" text-anchor="middle" class="small">${escapeXml(String(Math.round(stats.rank?.score ?? 56)))}</text>
   </g>`;
 }
 
@@ -139,12 +109,10 @@ function renderStatsSvg(stats, theme) {
   const PAD_BOT = 20;
   const H = BODY_Y + rows.length * ROW_H + PAD_BOT;
 
-  // Rank circle sits right of center, vertically centered in body
-  const RANK_CX = W - 58;
-  const RANK_CY = BODY_Y + (rows.length * ROW_H) / 2;
+  const RANK_X = W - 98;
+  const RANK_Y = BODY_Y + Math.round((rows.length * ROW_H) / 2) - 44;
 
-  // Value column: pushed left of rank circle
-  const VALUE_X = RANK_CX - 56;
+  const VALUE_X = RANK_X - 18;
 
   const title = `${stats.name}'s GitHub Stats`;
 
@@ -177,8 +145,8 @@ function renderStatsSvg(stats, theme) {
     </svg>
   </g>
 
-  <!-- Rank circle -->
-  ${renderRankCircle(stats, theme, RANK_CX, RANK_CY)}`;
+  <!-- Rank badge -->
+  ${renderRankBadge(stats, theme, RANK_X, RANK_Y)}`;
 
   return buildSvgDocument({ width: W, height: H, theme, title, body });
 }
