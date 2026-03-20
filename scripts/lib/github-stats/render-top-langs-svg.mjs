@@ -26,22 +26,22 @@ function renderLangRow(lang, rowY, delay, barW = 250) {
   <g transform="translate(0, ${rowY})">
     <g class="stagger" style="animation-delay: ${delay}ms">
       <!-- Language name -->
-      <text data-testid="lang-name" x="2" y="15" class="lang-name">${escapeXml(truncateText(lang.name, 24))}</text>
+      <text data-testid="lang-name" x="2" y="14" class="lang-name">${escapeXml(truncateText(lang.name, 24))}</text>
       <!-- Percent right-aligned -->
-      <text x="${barW + 2}" y="15" text-anchor="end" class="lang-name">${escapeXml(pct)}</text>
+      <text x="${barW + 2}" y="14" text-anchor="end" class="lang-name">${escapeXml(pct)}</text>
 
       <!-- Progress bar -->
-      <svg width="${barW}" x="0" y="22">
+      <svg width="${barW}" x="0" y="19">
         <!-- Grey track -->
-        <rect rx="4" ry="4" x="0" y="0" width="${barW}" height="7"
+        <rect rx="3" ry="3" x="0" y="0" width="${barW}" height="6"
           fill="rgba(255,255,255,0.08)"
         />
         <!-- Colored fill, animated -->
         <svg data-testid="lang-progress" width="${fillW}">
           <rect
-            height="7"
+            height="6"
             fill="${lang.color}"
-            rx="4" ry="4" x="0" y="0"
+            rx="3" ry="3" x="0" y="0"
             class="lang-progress"
             style="animation-delay: ${delay + 300}ms;"
           />
@@ -65,8 +65,8 @@ function renderTopLangsSvg(result, username, theme) {
   const W        = 320;
   const BAR_W    = 260;   
   const BODY_Y   = 55;    
-  const ROW_H    = 45;    
-  const PAD_BOT  = 20;
+  const ROW_H    = 36;    
+  const PAD_BOT  = 12;
 
   const H = BODY_Y + result.languages.length * ROW_H + PAD_BOT;
   const title = `${username}'s Top Languages`;

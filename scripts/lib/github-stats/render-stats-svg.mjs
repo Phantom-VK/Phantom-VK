@@ -95,11 +95,11 @@ function renderRankCircle(stats, theme, cx, cy) {
     <!-- Rank letter -->
     <g class="rank-text">
       <text x="0" y="0"
-        alignment-baseline="central"
-        dominant-baseline="central"
+        alignment-baseline="middle"
+        dominant-baseline="middle"
         text-anchor="middle"
         data-testid="level-rank-icon"
-        dy="0"
+        dy="0.06em"
       >${escapeXml(stats.rank?.level ?? "B+")}</text>
     </g>
     <!-- RANK label below letter -->
