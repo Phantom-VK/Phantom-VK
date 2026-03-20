@@ -22,6 +22,15 @@ function formatPercent(value) {
   return `${value.toFixed(value >= 10 ? 0 : 1)}%`;
 }
 
+function truncateText(value, maxLength) {
+  const input = String(value);
+  if (input.length <= maxLength) {
+    return input;
+  }
+
+  return `${input.slice(0, Math.max(0, maxLength - 1))}…`;
+}
+
 function buildSvgDocument({ width, height, theme, body, title, extraDefs = "" }) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
@@ -37,32 +46,28 @@ function buildSvgDocument({ width, height, theme, body, title, extraDefs = "" })
       <stop offset="100%" stop-color="${theme.panel}" />
     </linearGradient>
     <radialGradient id="glow-blue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(${width * 0.18} ${height * 0.12}) rotate(37) scale(${width * 0.38} ${height * 0.52})">
-      <stop stop-color="${theme.accent}" stop-opacity="0.22" />
+      <stop stop-color="${theme.accent}" stop-opacity="0.14" />
       <stop offset="1" stop-color="${theme.accent}" stop-opacity="0" />
     </radialGradient>
     <radialGradient id="glow-green" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(${width * 0.88} ${height * 0.15}) rotate(140) scale(${width * 0.28} ${height * 0.4})">
-      <stop stop-color="${theme.success}" stop-opacity="0.18" />
+      <stop stop-color="${theme.success}" stop-opacity="0.12" />
       <stop offset="1" stop-color="${theme.success}" stop-opacity="0" />
     </radialGradient>
-    <pattern id="grid-pattern" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
-      <path d="M22 0H0V22" fill="none" stroke="${theme.border}" stroke-opacity="0.18" />
-    </pattern>
     ${extraDefs}
   </defs>
   <style>
-    .title { fill: ${theme.title}; font: 700 20px 'Segoe UI', Ubuntu, Sans-Serif; }
-    .label { fill: ${theme.muted}; font: 600 11px 'Segoe UI', Ubuntu, Sans-Serif; letter-spacing: 0.08em; text-transform: uppercase; }
-    .value { fill: ${theme.text}; font: 700 18px 'Segoe UI', Ubuntu, Sans-Serif; }
-    .meta { fill: ${theme.muted}; font: 500 12px 'Segoe UI', Ubuntu, Sans-Serif; }
-    .small { fill: ${theme.muted}; font: 500 11px 'Segoe UI', Ubuntu, Sans-Serif; }
-    .pill { fill: ${theme.title}; font: 700 10px 'Segoe UI', Ubuntu, Sans-Serif; letter-spacing: 0.12em; text-transform: uppercase; }
+    .title { fill: ${theme.title}; font: 700 18px 'Segoe UI', Ubuntu, Sans-Serif; }
+    .label { fill: ${theme.muted}; font: 600 10px 'Segoe UI', Ubuntu, Sans-Serif; letter-spacing: 0.08em; text-transform: uppercase; }
+    .value { fill: ${theme.text}; font: 700 15px 'Segoe UI', Ubuntu, Sans-Serif; }
+    .meta { fill: ${theme.muted}; font: 500 11px 'Segoe UI', Ubuntu, Sans-Serif; }
+    .small { fill: ${theme.muted}; font: 500 10px 'Segoe UI', Ubuntu, Sans-Serif; }
+    .pill { fill: ${theme.title}; font: 700 9px 'Segoe UI', Ubuntu, Sans-Serif; letter-spacing: 0.12em; text-transform: uppercase; }
   </style>
   <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="18" fill="url(#surface-gradient)" stroke="${theme.border}" />
-  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="18" fill="url(#grid-pattern)" opacity="0.35" />
   <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="18" fill="url(#glow-blue)" />
   <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="18" fill="url(#glow-green)" />
   ${body}
 </svg>`;
 }
 
-export { buildSvgDocument, escapeXml, formatCompactNumber, formatNumber, formatPercent };
+export { buildSvgDocument, escapeXml, formatCompactNumber, formatNumber, formatPercent, truncateText };

@@ -1,7 +1,9 @@
 # 👋 Hey there, I'm Vikramaditya Khupse
 
-![Stats](./profile/stats.svg)
-![Languages](./profile/top-langs.svg)
+<p align="center">
+  <img src="./profile/stats.svg" alt="GitHub Stats" width="49%" />
+  <img src="./profile/top-langs.svg" alt="Top Languages" width="49%" />
+</p>
 
 
 
