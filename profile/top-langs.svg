@@ -97,9 +97,9 @@
   <g transform="translate(0, 0)">
     <g class="stagger" style="animation-delay: 450ms">
       <!-- Language name -->
-      <text data-testid="lang-name" x="2" y="14" class="lang-name">Python</text>
+      <text data-testid="lang-name" x="2" y="14" class="lang-name">Python - Jupyter Notebo…</text>
       <!-- Percent right-aligned -->
-      <text x="262" y="14" text-anchor="end" class="lang-name">67%</text>
+      <text x="262" y="14" text-anchor="end" class="lang-name">55%</text>
 
       <!-- Progress bar -->
       <svg width="260" x="0" y="19">
@@ -108,7 +108,7 @@
           fill="rgba(255,255,255,0.08)"
         />
         <!-- Colored fill, animated -->
-        <svg data-testid="lang-progress" width="174.56">
+        <svg data-testid="lang-progress" width="143.97">
           <rect
             height="6"
             fill="#3572A5"
@@ -149,6 +149,32 @@
   <g transform="translate(0, 72)">
     <g class="stagger" style="animation-delay: 750ms">
       <!-- Language name -->
+      <text data-testid="lang-name" x="2" y="14" class="lang-name">Python</text>
+      <!-- Percent right-aligned -->
+      <text x="262" y="14" text-anchor="end" class="lang-name">12%</text>
+
+      <!-- Progress bar -->
+      <svg width="260" x="0" y="19">
+        <!-- Grey track -->
+        <rect rx="3" ry="3" x="0" y="0" width="260" height="6"
+          fill="rgba(255,255,255,0.08)"
+        />
+        <!-- Colored fill, animated -->
+        <svg data-testid="lang-progress" width="30.60">
+          <rect
+            height="6"
+            fill="#3572A5"
+            rx="3" ry="3" x="0" y="0"
+            class="lang-progress"
+            style="animation-delay: 1050ms;"
+          />
+        </svg>
+      </svg>
+    </g>
+  </g>
+  <g transform="translate(0, 108)">
+    <g class="stagger" style="animation-delay: 900ms">
+      <!-- Language name -->
       <text data-testid="lang-name" x="2" y="14" class="lang-name">Java</text>
       <!-- Percent right-aligned -->
       <text x="262" y="14" text-anchor="end" class="lang-name">5.7%</text>
@@ -166,14 +192,14 @@
             fill="#b07219"
             rx="3" ry="3" x="0" y="0"
             class="lang-progress"
-            style="animation-delay: 1050ms;"
+            style="animation-delay: 1200ms;"
           />
         </svg>
       </svg>
     </g>
   </g>
-  <g transform="translate(0, 108)">
-    <g class="stagger" style="animation-delay: 900ms">
+  <g transform="translate(0, 144)">
+    <g class="stagger" style="animation-delay: 1050ms">
       <!-- Language name -->
       <text data-testid="lang-name" x="2" y="14" class="lang-name">HTML</text>
       <!-- Percent right-aligned -->
@@ -192,14 +218,14 @@
             fill="#e34c26"
             rx="3" ry="3" x="0" y="0"
             class="lang-progress"
-            style="animation-delay: 1200ms;"
+            style="animation-delay: 1350ms;"
           />
         </svg>
       </svg>
     </g>
   </g>
-  <g transform="translate(0, 144)">
-    <g class="stagger" style="animation-delay: 1050ms">
+  <g transform="translate(0, 180)">
+    <g class="stagger" style="animation-delay: 1200ms">
       <!-- Language name -->
       <text data-testid="lang-name" x="2" y="14" class="lang-name">JavaScript</text>
       <!-- Percent right-aligned -->
@@ -216,32 +242,6 @@
           <rect
             height="6"
             fill="#f1e05a"
-            rx="3" ry="3" x="0" y="0"
-            class="lang-progress"
-            style="animation-delay: 1350ms;"
-          />
-        </svg>
-      </svg>
-    </g>
-  </g>
-  <g transform="translate(0, 180)">
-    <g class="stagger" style="animation-delay: 1200ms">
-      <!-- Language name -->
-      <text data-testid="lang-name" x="2" y="14" class="lang-name">TypeScript</text>
-      <!-- Percent right-aligned -->
-      <text x="262" y="14" text-anchor="end" class="lang-name">1.3%</text>
-
-      <!-- Progress bar -->
-      <svg width="260" x="0" y="19">
-        <!-- Grey track -->
-        <rect rx="3" ry="3" x="0" y="0" width="260" height="6"
-          fill="rgba(255,255,255,0.08)"
-        />
-        <!-- Colored fill, animated -->
-        <svg data-testid="lang-progress" width="3.45">
-          <rect
-            height="6"
-            fill="#3178c6"
             rx="3" ry="3" x="0" y="0"
             class="lang-progress"
             style="animation-delay: 1500ms;"
