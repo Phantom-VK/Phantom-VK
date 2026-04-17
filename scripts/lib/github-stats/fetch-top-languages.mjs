@@ -27,7 +27,7 @@ const TOP_LANGUAGES_QUERY = `
 
 const LANGUAGE_ALIASES = Object.freeze({
   "Jupyter Notebook": {
-    name: "Python",
+    name: "Python - Jupyter Notebook",
     color: "#3572A5"
   }
 });
