@@ -134,7 +134,7 @@
           fill="rgba(255,255,255,0.08)"
         />
         <!-- Colored fill, animated -->
-        <svg data-testid="lang-progress" width="43.57">
+        <svg data-testid="lang-progress" width="43.58">
           <rect
             height="6"
             fill="#A97BFF"
@@ -160,7 +160,7 @@
           fill="rgba(255,255,255,0.08)"
         />
         <!-- Colored fill, animated -->
-        <svg data-testid="lang-progress" width="31.65">
+        <svg data-testid="lang-progress" width="31.64">
           <rect
             height="6"
             fill="#3572A5"
