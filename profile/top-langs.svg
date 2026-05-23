@@ -108,7 +108,7 @@
           fill="rgba(255,255,255,0.08)"
         />
         <!-- Colored fill, animated -->
-        <svg data-testid="lang-progress" width="140.51">
+        <svg data-testid="lang-progress" width="140.50">
           <rect
             height="6"
             fill="#3572A5"
