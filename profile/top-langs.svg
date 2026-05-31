@@ -108,7 +108,7 @@
           fill="rgba(255,255,255,0.08)"
         />
         <!-- Colored fill, animated -->
-        <svg data-testid="lang-progress" width="139.70">
+        <svg data-testid="lang-progress" width="139.63">
           <rect
             height="6"
             fill="#3572A5"
@@ -134,7 +134,7 @@
           fill="rgba(255,255,255,0.08)"
         />
         <!-- Colored fill, animated -->
-        <svg data-testid="lang-progress" width="43.52">
+        <svg data-testid="lang-progress" width="43.50">
           <rect
             height="6"
             fill="#A97BFF"
@@ -160,7 +160,7 @@
           fill="rgba(255,255,255,0.08)"
         />
         <!-- Colored fill, animated -->
-        <svg data-testid="lang-progress" width="34.64">
+        <svg data-testid="lang-progress" width="34.75">
           <rect
             height="6"
             fill="#3572A5"
@@ -186,7 +186,7 @@
           fill="rgba(255,255,255,0.08)"
         />
         <!-- Colored fill, animated -->
-        <svg data-testid="lang-progress" width="14.39">
+        <svg data-testid="lang-progress" width="14.38">
           <rect
             height="6"
             fill="#b07219"
@@ -212,7 +212,7 @@
           fill="rgba(255,255,255,0.08)"
         />
         <!-- Colored fill, animated -->
-        <svg data-testid="lang-progress" width="10.83">
+        <svg data-testid="lang-progress" width="10.82">
           <rect
             height="6"
             fill="#e34c26"
