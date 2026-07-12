@@ -1,11 +1,11 @@
-# 👋 Hey there, I'm Vikramaditya Khupse
+# Hello, I'm Vikramaditya
 
 <p align="center">
   <img src="./profile/top-langs.svg" alt="Top Languages" width="49%" />
   <img src="./profile/stats.svg" alt="GitHub Stats" width="49%" />
 </p>
 
-## 🚀 IT Engineer
+## 🚀 An Engineer
 
 IT Engineer, I love computers, video games and to solve problems.
 Currently working as an Agentic AI Automatic Engineer at Emplay Analytics.
@@ -13,7 +13,7 @@ Currently working as an Agentic AI Automatic Engineer at Emplay Analytics.
 
 ---
 
-### 🔧 Technical Stack
+### 🔧 Technical Stack (Jack of all trades, master of some...)
 
 **Languages:**  
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
