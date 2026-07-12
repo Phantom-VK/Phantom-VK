@@ -5,11 +5,11 @@
   <img src="./profile/stats.svg" alt="GitHub Stats" width="49%" />
 </p>
 
-## 🚀 IT Engineer | AI/ML & Backend Developer | DevOps
+## 🚀 IT Engineer
 
-Final-year B.Tech IT student (graduating June 2026) and former Associate Software Engineer (DevOps) at Better Software. I build production-grade AI systems, backend APIs, agentic workflows, and MLOps pipelines — with real deployments on AWS, Docker, and CI/CD.
+IT Engineer, I love computers, video games and to solve problems.
+Currently working as an Agentic AI Automatic Engineer at Emplay Analytics.
 
-IEEE-published researcher (RCSM 2025, MANIT Bhopal). National hackathon winner. Vice President of a developer club. Passionate about computers as a craft, not just a career.
 
 ---
 
