@@ -108,7 +108,7 @@
           fill="rgba(255,255,255,0.08)"
         />
         <!-- Colored fill, animated -->
-        <svg data-testid="lang-progress" width="136.47">
+        <svg data-testid="lang-progress" width="134.58">
           <rect
             height="6"
             fill="#3572A5"
@@ -123,9 +123,9 @@
   <g transform="translate(0, 36)">
     <g class="stagger" style="animation-delay: 600ms">
       <!-- Language name -->
-      <text data-testid="lang-name" x="2" y="14" class="lang-name">Kotlin</text>
+      <text data-testid="lang-name" x="2" y="14" class="lang-name">Python</text>
       <!-- Percent right-aligned -->
-      <text x="262" y="14" text-anchor="end" class="lang-name">17%</text>
+      <text x="262" y="14" text-anchor="end" class="lang-name">16%</text>
 
       <!-- Progress bar -->
       <svg width="260" x="0" y="19">
@@ -134,10 +134,10 @@
           fill="rgba(255,255,255,0.08)"
         />
         <!-- Colored fill, animated -->
-        <svg data-testid="lang-progress" width="42.90">
+        <svg data-testid="lang-progress" width="42.52">
           <rect
             height="6"
-            fill="#A97BFF"
+            fill="#3572A5"
             rx="3" ry="3" x="0" y="0"
             class="lang-progress"
             style="animation-delay: 900ms;"
@@ -149,9 +149,9 @@
   <g transform="translate(0, 72)">
     <g class="stagger" style="animation-delay: 750ms">
       <!-- Language name -->
-      <text data-testid="lang-name" x="2" y="14" class="lang-name">Python</text>
+      <text data-testid="lang-name" x="2" y="14" class="lang-name">Kotlin</text>
       <!-- Percent right-aligned -->
-      <text x="262" y="14" text-anchor="end" class="lang-name">15%</text>
+      <text x="262" y="14" text-anchor="end" class="lang-name">16%</text>
 
       <!-- Progress bar -->
       <svg width="260" x="0" y="19">
@@ -160,10 +160,10 @@
           fill="rgba(255,255,255,0.08)"
         />
         <!-- Colored fill, animated -->
-        <svg data-testid="lang-progress" width="39.47">
+        <svg data-testid="lang-progress" width="42.31">
           <rect
             height="6"
-            fill="#3572A5"
+            fill="#A97BFF"
             rx="3" ry="3" x="0" y="0"
             class="lang-progress"
             style="animation-delay: 1050ms;"
@@ -177,7 +177,7 @@
       <!-- Language name -->
       <text data-testid="lang-name" x="2" y="14" class="lang-name">Java</text>
       <!-- Percent right-aligned -->
-      <text x="262" y="14" text-anchor="end" class="lang-name">5.4%</text>
+      <text x="262" y="14" text-anchor="end" class="lang-name">5.3%</text>
 
       <!-- Progress bar -->
       <svg width="260" x="0" y="19">
@@ -186,7 +186,7 @@
           fill="rgba(255,255,255,0.08)"
         />
         <!-- Colored fill, animated -->
-        <svg data-testid="lang-progress" width="14.06">
+        <svg data-testid="lang-progress" width="13.86">
           <rect
             height="6"
             fill="#b07219"
@@ -203,7 +203,7 @@
       <!-- Language name -->
       <text data-testid="lang-name" x="2" y="14" class="lang-name">HTML</text>
       <!-- Percent right-aligned -->
-      <text x="262" y="14" text-anchor="end" class="lang-name">4.1%</text>
+      <text x="262" y="14" text-anchor="end" class="lang-name">4.0%</text>
 
       <!-- Progress bar -->
       <svg width="260" x="0" y="19">
@@ -212,7 +212,7 @@
           fill="rgba(255,255,255,0.08)"
         />
         <!-- Colored fill, animated -->
-        <svg data-testid="lang-progress" width="10.58">
+        <svg data-testid="lang-progress" width="10.43">
           <rect
             height="6"
             fill="#e34c26"
@@ -238,7 +238,7 @@
           fill="rgba(255,255,255,0.08)"
         />
         <!-- Colored fill, animated -->
-        <svg data-testid="lang-progress" width="6.56">
+        <svg data-testid="lang-progress" width="6.47">
           <rect
             height="6"
             fill="#f1e05a"
