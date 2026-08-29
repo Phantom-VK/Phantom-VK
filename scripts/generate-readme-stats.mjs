@@ -5,11 +5,14 @@ import { fetchUserStats } from "./lib/github-stats/fetch-user-stats.mjs";
 import { fetchTopLanguages } from "./lib/github-stats/fetch-top-languages.mjs";
 import { renderStatsSvg } from "./lib/github-stats/render-stats-svg.mjs";
 import { renderTopLangsSvg } from "./lib/github-stats/render-top-langs-svg.mjs";
+import { renderStackSvg } from "./lib/github-stats/render-stack-svg.mjs";
+import { THEMES } from "./lib/github-stats/theme.mjs";
 
 async function main() {
   const config = buildRuntimeConfig();
   await mkdir(config.outputDir, { recursive: true });
 
+  // Fetch once, render once per theme — themes are a rendering concern only.
   const [stats, languages] = await Promise.all([
     fetchUserStats(config.username, {
       includeAllCommits: config.includeAllCommits,
@@ -21,15 +24,15 @@ async function main() {
     })
   ]);
 
-  const statsSvg = renderStatsSvg(stats, config.theme);
-  const topLangsSvg = renderTopLangsSvg(languages, config.username, config.theme);
-
-  await Promise.all([
-    writeFile(join(config.outputDir, "stats.svg"), statsSvg, "utf8"),
-    writeFile(join(config.outputDir, "top-langs.svg"), topLangsSvg, "utf8")
+  const writes = Object.entries(THEMES).flatMap(([themeName, theme]) => [
+    writeFile(join(config.outputDir, `stats-${themeName}.svg`), renderStatsSvg(stats, theme), "utf8"),
+    writeFile(join(config.outputDir, `top-langs-${themeName}.svg`), renderTopLangsSvg(languages, config.username, theme), "utf8"),
+    writeFile(join(config.outputDir, `stack-${themeName}.svg`), renderStackSvg(theme, stats.topRepos), "utf8")
   ]);
 
-  console.log(`Generated README stats for ${config.username} in ${config.outputDir}/`);
+  await Promise.all(writes);
+
+  console.log(`Generated README stats for ${config.username} in ${config.outputDir}/ (${Object.keys(THEMES).length} themes x 3 cards)`);
 }
 
 main().catch((error) => {

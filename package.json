@@ -5,6 +5,6 @@
   "scripts": {
     "generate:stats": "node scripts/generate-readme-stats.mjs",
     "serve:stats": "node scripts/serve-readme-stats.mjs",
-    "check:stats": "node --check scripts/generate-readme-stats.mjs && node --check scripts/serve-readme-stats.mjs && node --check scripts/lib/github-stats/config.mjs && node --check scripts/lib/github-stats/github-client.mjs && node --check scripts/lib/github-stats/fetch-user-stats.mjs && node --check scripts/lib/github-stats/fetch-top-languages.mjs && node --check scripts/lib/github-stats/render-shared.mjs && node --check scripts/lib/github-stats/render-stats-svg.mjs && node --check scripts/lib/github-stats/render-top-langs-svg.mjs"
+    "check:stats": "node --check scripts/generate-readme-stats.mjs && node --check scripts/serve-readme-stats.mjs && node --check scripts/lib/github-stats/config.mjs && node --check scripts/lib/github-stats/github-client.mjs && node --check scripts/lib/github-stats/fetch-user-stats.mjs && node --check scripts/lib/github-stats/fetch-top-languages.mjs && node --check scripts/lib/github-stats/render-shared.mjs && node --check scripts/lib/github-stats/render-stats-svg.mjs && node --check scripts/lib/github-stats/render-top-langs-svg.mjs && node --check scripts/lib/github-stats/theme.mjs && node --check scripts/lib/github-stats/stack-data.mjs && node --check scripts/lib/github-stats/render-stack-svg.mjs"
   }
 }

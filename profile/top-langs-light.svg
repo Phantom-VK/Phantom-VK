@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="440"
+  height="300"
+  viewBox="0 0 440 300"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-labelledby="toplangs-title toplangs-desc"
+>
+  <title id="toplangs-title">Phantom-VK&apos;s Top Languages</title>
+  <desc id="toplangs-desc">Phantom-VK&apos;s Top Languages</desc>
+
+  <defs>
+    
+  </defs>
+
+  <style>
+    text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      fill: #6B7078;
+    }
+
+    .title {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      fill: #0B0C0E;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      font-weight: 450;
+      fill: #6B7078;
+    }
+
+    .stat-value {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      fill: #0B0C0E;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .rank-value {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      fill: #0B0C0E;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .meta {
+      font-size: 10px;
+      font-weight: 450;
+      letter-spacing: 0.02em;
+      fill: #6B7078;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .lang-name {
+      font-size: 13px;
+      font-weight: 450;
+      fill: #0B0C0E;
+    }
+
+    .icon {
+      fill: #6B7078;
+    }
+
+    .stagger {
+      opacity: 0;
+      animation: fadeIn 200ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    }
+
+    .lang-progress {
+      transform-box: fill-box;
+      transform-origin: left center;
+      transform: scaleX(0);
+      animation: growBar 200ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    }
+
+    @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes growBar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .stagger { animation: none; opacity: 1; }
+      .lang-progress { animation: none; transform: scaleX(1); }
+    }
+  </style>
+
+  <!-- Card surface -->
+  <rect x="0.5" y="0.5" rx="10"
+    width="439" height="299"
+    fill="#FFFFFF"
+    stroke="#E6E7EA"
+  />
+
+  
+  <!-- Title -->
+  <text x="28" y="40" class="title">Most Used Languages</text>
+
+  <!-- Language rows -->
+  <g transform="translate(28, 76)">
+    
+  <g transform="translate(0, 0)">
+    <g class="stagger" style="animation-delay: 0ms">
+      <text x="0" y="14" class="lang-name">Python - Jupyter Notebook</text>
+      <text x="384" y="14" text-anchor="end" class="meta">49%</text>
+
+      <rect x="0" y="22" width="384" height="6" rx="3" fill="#E6E7EA" />
+      <rect
+        x="0" y="22" width="186.90" height="6" rx="3"
+        fill="#3c719e"
+        class="lang-progress"
+        style="animation-delay: 80ms;"
+      />
+    </g>
+  </g>
+  <g transform="translate(0, 32.666666666666664)">
+    <g class="stagger" style="animation-delay: 40ms">
+      <text x="0" y="14" class="lang-name">Kotlin</text>
+      <text x="384" y="14" text-anchor="end" class="meta">16%</text>
+
+      <rect x="0" y="22" width="384" height="6" rx="3" fill="#E6E7EA" />
+      <rect
+        x="0" y="22" width="62.77" height="6" rx="3"
+        fill="#6e46b9"
+        class="lang-progress"
+        style="animation-delay: 120ms;"
+      />
+    </g>
+  </g>
+  <g transform="translate(0, 65.33333333333333)">
+    <g class="stagger" style="animation-delay: 80ms">
+      <text x="0" y="14" class="lang-name">Python</text>
+      <text x="384" y="14" text-anchor="end" class="meta">16%</text>
+
+      <rect x="0" y="22" width="384" height="6" rx="3" fill="#E6E7EA" />
+      <rect
+        x="0" y="22" width="59.95" height="6" rx="3"
+        fill="#3c719e"
+        class="lang-progress"
+        style="animation-delay: 160ms;"
+      />
+    </g>
+  </g>
+  <g transform="translate(0, 98)">
+    <g class="stagger" style="animation-delay: 120ms">
+      <text x="0" y="14" class="lang-name">Java</text>
+      <text x="384" y="14" text-anchor="end" class="meta">5.0%</text>
+
+      <rect x="0" y="22" width="384" height="6" rx="3" fill="#E6E7EA" />
+      <rect
+        x="0" y="22" width="19.25" height="6" rx="3"
+        fill="#926d37"
+        class="lang-progress"
+        style="animation-delay: 200ms;"
+      />
+    </g>
+  </g>
+  <g transform="translate(0, 130.66666666666666)">
+    <g class="stagger" style="animation-delay: 160ms">
+      <text x="0" y="14" class="lang-name">TypeScript</text>
+      <text x="384" y="14" text-anchor="end" class="meta">4.8%</text>
+
+      <rect x="0" y="22" width="384" height="6" rx="3" fill="#E6E7EA" />
+      <rect
+        x="0" y="22" width="18.32" height="6" rx="3"
+        fill="#4479b3"
+        class="lang-progress"
+        style="animation-delay: 240ms;"
+      />
+    </g>
+  </g>
+  <g transform="translate(0, 163.33333333333331)">
+    <g class="stagger" style="animation-delay: 200ms">
+      <text x="0" y="14" class="lang-name">HTML</text>
+      <text x="384" y="14" text-anchor="end" class="meta">4.4%</text>
+
+      <rect x="0" y="22" width="384" height="6" rx="3" fill="#E6E7EA" />
+      <rect
+        x="0" y="22" width="17.01" height="6" rx="3"
+        fill="#b95d46"
+        class="lang-progress"
+        style="animation-delay: 280ms;"
+      />
+    </g>
+  </g>
+  </g>
+</svg>

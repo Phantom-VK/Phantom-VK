@@ -4,6 +4,7 @@ import { fetchUserStats } from "./lib/github-stats/fetch-user-stats.mjs";
 import { fetchTopLanguages } from "./lib/github-stats/fetch-top-languages.mjs";
 import { renderStatsSvg } from "./lib/github-stats/render-stats-svg.mjs";
 import { renderTopLangsSvg } from "./lib/github-stats/render-top-langs-svg.mjs";
+import { renderStackSvg } from "./lib/github-stats/render-stack-svg.mjs";
 
 function writeSvg(res, svg) {
   res.writeHead(200, {
@@ -24,7 +25,8 @@ const server = http.createServer(async (req, res) => {
     username: url.searchParams.get("username") || undefined,
     includeAllCommits: parseBoolean(url.searchParams.get("include_all_commits")),
     topLanguagesCount: parseInteger(url.searchParams.get("langs_count"), 6),
-    excludedRepos: parseList(url.searchParams.get("excluded_repos"))
+    excludedRepos: parseList(url.searchParams.get("excluded_repos")),
+    themeName: url.searchParams.get("theme") || undefined
   });
 
   try {
@@ -44,9 +46,18 @@ const server = http.createServer(async (req, res) => {
       return writeSvg(res, renderTopLangsSvg(languages, baseConfig.username, baseConfig.theme));
     }
 
+    if (url.pathname === "/api/stack") {
+      const stats = await fetchUserStats(baseConfig.username, {
+        includeAllCommits: baseConfig.includeAllCommits,
+        excludedRepos: baseConfig.excludedRepos
+      });
+      return writeSvg(res, renderStackSvg(baseConfig.theme, stats.topRepos));
+    }
+
     return writeJson(res, 404, {
       message: "Not found",
-      availableRoutes: ["/api/stats", "/api/top-langs"]
+      availableRoutes: ["/api/stats", "/api/top-langs", "/api/stack"],
+      queryParams: ["theme (dark|light)", "username", "include_all_commits", "langs_count", "excluded_repos"]
     });
   } catch (error) {
     return writeJson(res, 500, { message: error.message });

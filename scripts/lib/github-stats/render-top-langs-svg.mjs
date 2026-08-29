@@ -1,52 +1,35 @@
-
-
 import {
   buildSvgDocument,
   escapeXml,
   formatPercent,
   truncateText,
 } from "./render-shared.mjs";
+import { harmonizeColor } from "./theme.mjs";
 
 /**
  * renderLangRow
- * One language entry matching the reference layout:
- *   - lang name (left) | percent (right)
- *   - grey track bar | colored fill bar (animated)
- *
- * @param {object} lang   - { name, color, share }
- * @param {number} rowY   - y offset for this row (within the body group)
- * @param {number} delay  - stagger animation delay ms
- * @param {number} barW   - total width of progress track
+ * One language entry: name (left) / percent (right), track bar below with an
+ * explicit-width fill bar (see bug fix: the old version had no width attribute
+ * at all and relied entirely on a CSS animation to size it).
  */
-function renderLangRow(lang, rowY, delay, barW = 250) {
+function renderLangRow(lang, theme, rowY, delay, barW) {
   const fillW = Math.max((lang.share / 100) * barW, 3).toFixed(2);
-  const pct   = formatPercent(lang.share);
+  const pct = formatPercent(lang.share);
+  const color = harmonizeColor(lang.color, theme);
 
   return `
   <g transform="translate(0, ${rowY})">
     <g class="stagger" style="animation-delay: ${delay}ms">
-      <!-- Language name -->
-      <text data-testid="lang-name" x="2" y="14" class="lang-name">${escapeXml(truncateText(lang.name, 24))}</text>
-      <!-- Percent right-aligned -->
-      <text x="${barW + 2}" y="14" text-anchor="end" class="lang-name">${escapeXml(pct)}</text>
+      <text x="0" y="14" class="lang-name">${escapeXml(truncateText(lang.name, 28))}</text>
+      <text x="${barW}" y="14" text-anchor="end" class="meta">${escapeXml(pct)}</text>
 
-      <!-- Progress bar -->
-      <svg width="${barW}" x="0" y="19">
-        <!-- Grey track -->
-        <rect rx="3" ry="3" x="0" y="0" width="${barW}" height="6"
-          fill="rgba(255,255,255,0.08)"
-        />
-        <!-- Colored fill, animated -->
-        <svg data-testid="lang-progress" width="${fillW}">
-          <rect
-            height="6"
-            fill="${lang.color}"
-            rx="3" ry="3" x="0" y="0"
-            class="lang-progress"
-            style="animation-delay: ${delay + 300}ms;"
-          />
-        </svg>
-      </svg>
+      <rect x="0" y="22" width="${barW}" height="6" rx="3" fill="${theme.line}" />
+      <rect
+        x="0" y="22" width="${fillW}" height="6" rx="3"
+        fill="${color}"
+        class="lang-progress"
+        style="animation-delay: ${delay + 80}ms;"
+      />
     </g>
   </g>`;
 }
@@ -54,48 +37,41 @@ function renderLangRow(lang, rowY, delay, barW = 250) {
 /**
  * renderTopLangsSvg
  *
- * Full top-languages card.
- * Width = 320, height = 55 (header) + langs * 45 + 20 (bottom pad).
+ * Fixed-canvas top-languages card (440x300) — identical dimensions to the
+ * stats card so both pair at 49%/49% in the README without a height mismatch.
  *
  * @param {object} result   - { languages: [{ name, color, share }] }
  * @param {string} username
  * @param {object} theme
  */
 function renderTopLangsSvg(result, username, theme) {
-  const W        = 320;
-  const BAR_W    = 260;   
-  const BODY_Y   = 55;    
-  const ROW_H    = 36;    
-  const PAD_BOT  = 12;
+  const W = 440;
+  const H = 300;
+  const PAD = 28;
 
-  const H = BODY_Y + result.languages.length * ROW_H + PAD_BOT;
+  const HEADER_BASELINE_Y = 40;
+  const BODY_Y = 76;
+
+  const barW = W - PAD * 2;
+  const bodyHeight = H - BODY_Y - PAD;
+  const rowH = bodyHeight / Math.max(result.languages.length, 1);
+
   const title = `${username}'s Top Languages`;
 
-  const langRows = result.languages
-    .map((lang, i) =>
-      renderLangRow(
-        lang,
-        i * ROW_H,          
-        450 + i * 150,     
-        BAR_W,
-      )
-    )
+  const rows = result.languages
+    .map((lang, i) => renderLangRow(lang, theme, i * rowH, i * 40, barW))
     .join("");
 
   const body = `
   <!-- Title -->
-  <g data-testid="card-title" transform="translate(25, 35)">
-    <text x="0" y="0" class="header" data-testid="header">Most Used Languages</text>
-  </g>
+  <text x="${PAD}" y="${HEADER_BASELINE_Y}" class="title">Most Used Languages</text>
 
-  <!-- Lang rows -->
-  <g data-testid="main-card-body" transform="translate(0, ${BODY_Y})">
-    <svg data-testid="lang-items" x="25">
-      ${langRows}
-    </svg>
+  <!-- Language rows -->
+  <g transform="translate(${PAD}, ${BODY_Y})">
+    ${rows}
   </g>`;
 
-  return buildSvgDocument({ width: W, height: H, theme, title, body });
+  return buildSvgDocument({ width: W, height: H, theme, title, body, idPrefix: "toplangs" });
 }
 
 export { renderTopLangsSvg };

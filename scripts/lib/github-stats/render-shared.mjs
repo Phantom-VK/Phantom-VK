@@ -1,5 +1,7 @@
 // render-shared.mjs
 
+const FONT_STACK = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
+
 function escapeXml(value) {
   return String(value)
     .replaceAll("&", "&amp;")
@@ -7,10 +9,6 @@ function escapeXml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&apos;");
-}
-
-function formatNumber(value) {
-  return new Intl.NumberFormat("en-US").format(value);
 }
 
 function formatCompactNumber(value) {
@@ -33,21 +31,26 @@ function truncateText(value, maxLength) {
 /**
  * buildSvgDocument
  *
- * Clean dark card matching the reference github-readme-stats aesthetic:
- *   - #0D1117 background, thin #30363D border
- *   - Soft radial accent glow (top-left)
- *   - Shared CSS: .header .stat .label .stagger .rank-text .small .icon
- *   - Standard animations: fadeIn, scaleIn, rankSpin, growWidth
+ * Monochrome card shell shared by every rendered card:
+ *   - theme.background fill, thin theme.line border, rx 10
+ *   - Shared CSS: .eyebrow .title .stat-label .stat-value .rank-value .meta .icon
+ *   - Fast stagger reveal (200ms, strong ease-out), no motion beyond opacity
+ *     + a scaleX bar-fill, and a prefers-reduced-motion escape hatch.
  *
  * @param {object} opts
  * @param {number}  opts.width
  * @param {number}  opts.height
- * @param {object}  opts.theme       - color tokens
+ * @param {object}  opts.theme       - color tokens (see theme.mjs)
  * @param {string}  opts.body        - inner SVG markup
  * @param {string}  opts.title       - accessibility title
+ * @param {string}  [opts.idPrefix]  - unique prefix for this document's ids (multiple
+ *                                     cards can be embedded together; ids must not collide)
  * @param {string}  [opts.extraDefs] - additional <defs> (clipPaths etc.)
  */
-function buildSvgDocument({ width, height, theme, body, title, extraDefs = "" }) {
+function buildSvgDocument({ width, height, theme, body, title, idPrefix = "card", extraDefs = "" }) {
+  const titleId = `${idPrefix}-title`;
+  const descId = `${idPrefix}-desc`;
+
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg
   width="${width}"
@@ -56,82 +59,101 @@ function buildSvgDocument({ width, height, theme, body, title, extraDefs = "" })
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
   role="img"
-  aria-labelledby="titleId descId"
+  aria-labelledby="${titleId} ${descId}"
 >
-  <title id="titleId">${escapeXml(title)}</title>
-  <desc id="descId">${escapeXml(title)}</desc>
+  <title id="${titleId}">${escapeXml(title)}</title>
+  <desc id="${descId}">${escapeXml(title)}</desc>
 
   <defs>
-    <radialGradient id="ambient-glow" cx="0" cy="0" r="1"
-      gradientUnits="userSpaceOnUse"
-      gradientTransform="translate(0 0) scale(${(width * 0.8).toFixed(0)} ${(height * 1.1).toFixed(0)})">
-      <stop offset="0%"   stop-color="${theme.accent}" stop-opacity="0.06" />
-      <stop offset="100%" stop-color="${theme.accent}" stop-opacity="0"    />
-    </radialGradient>
     ${extraDefs}
   </defs>
 
   <style>
-    .header {
-      font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-      fill: ${theme.accent};
-      animation: fadeIn 0.8s ease-in-out forwards;
+    text {
+      font-family: ${FONT_STACK};
     }
-    @supports (-moz-appearance: auto) { .header { font-size: 15.5px; } }
 
-    .stat {
-      font: 600 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif;
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      fill: ${theme.muted};
+    }
+
+    .title {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
       fill: ${theme.text};
     }
-    @supports (-moz-appearance: auto) { .stat { font-size: 12px; } }
 
-    .bold  { font-weight: 700; }
-    .label { font: 600 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${theme.muted}; text-transform: uppercase; letter-spacing: 0.07em; }
-    .small { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${theme.muted}; }
-    .lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${theme.text}; }
-
-    .rank-text  { font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${theme.text}; animation: scaleIn 0.3s ease-in-out forwards; }
-    .rank-label { font: 600 9px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${theme.muted}; text-transform: uppercase; letter-spacing: 0.1em; }
-
-    .icon { fill: ${theme.accent}; display: block; }
-
-    .rank-circle-rim {
-      stroke: ${theme.accent}; fill: none; stroke-width: 5; opacity: 0.18;
-    }
-    .rank-circle {
-      stroke: ${theme.accent};
-      stroke-dasharray: 250;
-      fill: none;
-      stroke-width: 5;
-      stroke-linecap: round;
-      opacity: 0.85;
-      transform-origin: -10px 8px;
-      transform: rotate(-90deg);
-      animation: rankSpin 1s forwards ease-in-out;
+    .stat-label {
+      font-size: 13px;
+      font-weight: 450;
+      fill: ${theme.muted};
     }
 
-    .stagger { opacity: 0; animation: fadeIn 0.3s ease-in-out forwards; }
+    .stat-value {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      fill: ${theme.text};
+      font-variant-numeric: tabular-nums;
+    }
 
-    .lang-progress { animation: growWidth 0.6s ease-in-out forwards; }
-    #rect-mask rect { animation: slideIn 1s ease-in-out forwards; }
+    .rank-value {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      fill: ${theme.text};
+      font-variant-numeric: tabular-nums;
+    }
 
-    @keyframes fadeIn   { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes scaleIn  { from { transform: translate(-5px,5px) scale(0); } to { transform: translate(-5px,5px) scale(1); } }
-    @keyframes rankSpin { from { stroke-dashoffset: 251; } to { stroke-dashoffset: 110; } }
-    @keyframes growWidth { from { width: 0; } to { width: 100%; } }
-    @keyframes slideIn   { from { width: 0; } to { width: calc(100% - 100px); } }
+    .meta {
+      font-size: 10px;
+      font-weight: 450;
+      letter-spacing: 0.02em;
+      fill: ${theme.muted};
+      font-variant-numeric: tabular-nums;
+    }
+
+    .lang-name {
+      font-size: 13px;
+      font-weight: 450;
+      fill: ${theme.text};
+    }
+
+    .icon {
+      fill: ${theme.muted};
+    }
+
+    .stagger {
+      opacity: 0;
+      animation: fadeIn 200ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    }
+
+    .lang-progress {
+      transform-box: fill-box;
+      transform-origin: left center;
+      transform: scaleX(0);
+      animation: growBar 200ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    }
+
+    @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes growBar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .stagger { animation: none; opacity: 1; }
+      .lang-progress { animation: none; transform: scaleX(1); }
+    }
   </style>
 
   <!-- Card surface -->
-  <rect x="0.5" y="0.5" rx="8"
+  <rect x="0.5" y="0.5" rx="10"
     width="${width - 1}" height="${height - 1}"
     fill="${theme.background}"
-    stroke="${theme.border}" stroke-opacity="0.9"
-  />
-  <!-- Ambient glow overlay -->
-  <rect x="0.5" y="0.5" rx="8"
-    width="${width - 1}" height="${height - 1}"
-    fill="url(#ambient-glow)"
+    stroke="${theme.line}"
   />
 
   ${body}
@@ -142,7 +164,6 @@ export {
   buildSvgDocument,
   escapeXml,
   formatCompactNumber,
-  formatNumber,
   formatPercent,
   truncateText,
 };

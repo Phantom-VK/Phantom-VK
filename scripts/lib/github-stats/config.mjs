@@ -1,15 +1,6 @@
-const DEFAULT_THEME = Object.freeze({
-  background: "#0d1117",
-  panel: "#161b22",
-  border: "#30363d",
-  title: "#f0f6fc",
-  text: "#c9d1d9",
-  muted: "#8b949e",
-  accent: "#58a6ff",
-  accentSoft: "#1f6feb",
-  success: "#3fb950",
-  warning: "#d29922"
-});
+import { THEMES, resolveTheme } from "./theme.mjs";
+
+const DEFAULT_THEME = THEMES.dark;
 
 function parseBoolean(value, defaultValue = false) {
   if (value === undefined || value === null || value === "") {
@@ -49,8 +40,9 @@ function buildRuntimeConfig(overrides = {}) {
   const excludedRepos = parseList(
     overrides.excludedRepos ?? process.env.GITHUB_STATS_EXCLUDED_REPOS
   );
+  const themeName = overrides.themeName || process.env.GITHUB_STATS_THEME || "dark";
   const theme = {
-    ...DEFAULT_THEME,
+    ...resolveTheme(themeName),
     ...(overrides.theme || {})
   };
 
@@ -60,6 +52,7 @@ function buildRuntimeConfig(overrides = {}) {
     includeAllCommits,
     topLanguagesCount,
     excludedRepos,
+    themeName,
     theme
   };
 }

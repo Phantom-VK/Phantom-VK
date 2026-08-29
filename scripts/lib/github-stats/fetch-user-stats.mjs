@@ -82,6 +82,7 @@ async function fetchUserStats(username, options = {}) {
   let after = null;
   let summary = null;
   let totalStars = 0;
+  let topRepos = [];
 
   while (hasNextPage) {
     const data = await githubGraphQL(USER_STATS_QUERY, {
@@ -104,6 +105,13 @@ async function fetchUserStats(username, options = {}) {
     );
 
     totalStars += visibleRepos.reduce((sum, repo) => sum + repo.stargazerCount, 0);
+
+    // Repos already arrive STARGAZERS DESC, so the first page's visible repos
+    // are the top-starred ones. Take the top 3 without an extra API call.
+    if (topRepos.length < 3) {
+      topRepos = [...topRepos, ...visibleRepos].slice(0, 3);
+    }
+
     hasNextPage = user.repositories.pageInfo.hasNextPage;
     after = user.repositories.pageInfo.endCursor;
   }
@@ -123,7 +131,8 @@ async function fetchUserStats(username, options = {}) {
     totalCommits,
     followers: summary.followers.totalCount,
     contributedTo: summary.repositoriesContributedTo.totalCount,
-    commitWindowLabel: options.includeAllCommits ? "Commits" : "Commits (1y)"
+    commitWindowLabel: options.includeAllCommits ? "Commits" : "Commits (1y)",
+    topRepos: topRepos.map((repo) => ({ name: repo.name, stars: repo.stargazerCount }))
   };
 
   return {
