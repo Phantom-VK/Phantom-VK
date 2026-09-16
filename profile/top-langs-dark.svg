@@ -113,11 +113,11 @@
   <g transform="translate(0, 0)">
     <g class="stagger" style="animation-delay: 0ms">
       <text x="0" y="14" class="lang-name">Python - Jupyter Notebook</text>
-      <text x="384" y="14" text-anchor="end" class="meta">49%</text>
+      <text x="384" y="14" text-anchor="end" class="meta">47%</text>
 
       <rect x="0" y="22" width="384" height="6" rx="3" fill="#23252A" />
       <rect
-        x="0" y="22" width="186.38" height="6" rx="3"
+        x="0" y="22" width="178.72" height="6" rx="3"
         fill="#5991c0"
         class="lang-progress"
         style="animation-delay: 80ms;"
@@ -126,13 +126,13 @@
   </g>
   <g transform="translate(0, 32.666666666666664)">
     <g class="stagger" style="animation-delay: 40ms">
-      <text x="0" y="14" class="lang-name">Kotlin</text>
-      <text x="384" y="14" text-anchor="end" class="meta">16%</text>
+      <text x="0" y="14" class="lang-name">Python</text>
+      <text x="384" y="14" text-anchor="end" class="meta">19%</text>
 
       <rect x="0" y="22" width="384" height="6" rx="3" fill="#23252A" />
       <rect
-        x="0" y="22" width="63.05" height="6" rx="3"
-        fill="#ae97d8"
+        x="0" y="22" width="73.35" height="6" rx="3"
+        fill="#5991c0"
         class="lang-progress"
         style="animation-delay: 120ms;"
       />
@@ -140,13 +140,13 @@
   </g>
   <g transform="translate(0, 65.33333333333333)">
     <g class="stagger" style="animation-delay: 80ms">
-      <text x="0" y="14" class="lang-name">Python</text>
+      <text x="0" y="14" class="lang-name">Kotlin</text>
       <text x="384" y="14" text-anchor="end" class="meta">16%</text>
 
       <rect x="0" y="22" width="384" height="6" rx="3" fill="#23252A" />
       <rect
-        x="0" y="22" width="60.04" height="6" rx="3"
-        fill="#5991c0"
+        x="0" y="22" width="60.46" height="6" rx="3"
+        fill="#ae97d8"
         class="lang-progress"
         style="animation-delay: 160ms;"
       />
@@ -155,11 +155,11 @@
   <g transform="translate(0, 98)">
     <g class="stagger" style="animation-delay: 120ms">
       <text x="0" y="14" class="lang-name">Java</text>
-      <text x="384" y="14" text-anchor="end" class="meta">5.0%</text>
+      <text x="384" y="14" text-anchor="end" class="meta">4.8%</text>
 
       <rect x="0" y="22" width="384" height="6" rx="3" fill="#23252A" />
       <rect
-        x="0" y="22" width="19.20" height="6" rx="3"
+        x="0" y="22" width="18.41" height="6" rx="3"
         fill="#c09559"
         class="lang-progress"
         style="animation-delay: 200ms;"
@@ -169,11 +169,11 @@
   <g transform="translate(0, 130.66666666666666)">
     <g class="stagger" style="animation-delay: 160ms">
       <text x="0" y="14" class="lang-name">TypeScript</text>
-      <text x="384" y="14" text-anchor="end" class="meta">4.8%</text>
+      <text x="384" y="14" text-anchor="end" class="meta">4.6%</text>
 
       <rect x="0" y="22" width="384" height="6" rx="3" fill="#23252A" />
       <rect
-        x="0" y="22" width="18.27" height="6" rx="3"
+        x="0" y="22" width="17.52" height="6" rx="3"
         fill="#598ac0"
         class="lang-progress"
         style="animation-delay: 240ms;"
@@ -183,11 +183,11 @@
   <g transform="translate(0, 163.33333333333331)">
     <g class="stagger" style="animation-delay: 200ms">
       <text x="0" y="14" class="lang-name">HTML</text>
-      <text x="384" y="14" text-anchor="end" class="meta">4.4%</text>
+      <text x="384" y="14" text-anchor="end" class="meta">4.2%</text>
 
       <rect x="0" y="22" width="384" height="6" rx="3" fill="#23252A" />
       <rect
-        x="0" y="22" width="16.96" height="6" rx="3"
+        x="0" y="22" width="16.26" height="6" rx="3"
         fill="#c06d59"
         class="lang-progress"
         style="animation-delay: 280ms;"
