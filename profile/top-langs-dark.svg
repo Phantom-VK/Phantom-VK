@@ -117,7 +117,7 @@
 
       <rect x="0" y="22" width="384" height="6" rx="3" fill="#23252A" />
       <rect
-        x="0" y="22" width="168.00" height="6" rx="3"
+        x="0" y="22" width="167.96" height="6" rx="3"
         fill="#5991c0"
         class="lang-progress"
         style="animation-delay: 80ms;"
@@ -131,7 +131,7 @@
 
       <rect x="0" y="22" width="384" height="6" rx="3" fill="#23252A" />
       <rect
-        x="0" y="22" width="84.86" height="6" rx="3"
+        x="0" y="22" width="84.84" height="6" rx="3"
         fill="#5991c0"
         class="lang-progress"
         style="animation-delay: 120ms;"
@@ -145,7 +145,7 @@
 
       <rect x="0" y="22" width="384" height="6" rx="3" fill="#23252A" />
       <rect
-        x="0" y="22" width="56.84" height="6" rx="3"
+        x="0" y="22" width="56.82" height="6" rx="3"
         fill="#ae97d8"
         class="lang-progress"
         style="animation-delay: 160ms;"
@@ -173,7 +173,7 @@
 
       <rect x="0" y="22" width="384" height="6" rx="3" fill="#23252A" />
       <rect
-        x="0" y="22" width="17.31" height="6" rx="3"
+        x="0" y="22" width="17.30" height="6" rx="3"
         fill="#c09559"
         class="lang-progress"
         style="animation-delay: 240ms;"
