@@ -147,7 +147,7 @@
     
     <g class="stagger" style="animation-delay: 80ms" transform="translate(0, 192)">
       <text x="0" y="10" class="eyebrow">Top Repositories</text>
-      <text x="0" y="32" class="stat-label">MyPortfolio (★20)  ·  NoRefund (★3)  ·  AgentTuring (★1)</text>
+      <text x="0" y="32" class="stat-label">MyPortfolio (★19)  ·  NoRefund (★3)  ·  AgentTuring (★1)</text>
     </g>
   </g>
 </svg>
