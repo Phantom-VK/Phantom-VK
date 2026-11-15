@@ -161,7 +161,7 @@
       <path d="M8 2c1.981 0 3.671.992 4.933 2.078 1.27 1.091 2.187 2.345 2.637 3.023a1.62 1.62 0 010 1.798c-.45.678-1.367 1.932-2.637 3.023C11.67 13.008 9.981 14 8 14c-1.981 0-3.671-.992-4.933-2.078C1.797 10.83.88 9.576.43 8.898a1.62 1.62 0 010-1.798c.45-.677 1.367-1.931 2.637-3.022C4.329 2.992 6.019 2 8 2zm0 4a2 2 0 100 4 2 2 0 000-4z"/>
     </svg></g>
       <text class="stat-label" x="24" y="16.75">Total Reviews</text>
-      <text class="stat-value" x="256" y="16.75" text-anchor="end">35</text>
+      <text class="stat-value" x="256" y="16.75" text-anchor="end">34</text>
     </g>
   </g>
   <g transform="translate(0, 147)">
@@ -190,6 +190,6 @@
     <rect width="108" height="130" rx="12" fill="#FAFAFA" stroke="#E6E7EA" />
     <text x="54" y="28" text-anchor="middle" class="eyebrow">Rank</text>
     <text x="54" y="78" text-anchor="middle" class="rank-value">B+</text>
-    <text x="54" y="108" text-anchor="middle" class="meta">SCORE 1043</text>
+    <text x="54" y="108" text-anchor="middle" class="meta">SCORE 1041</text>
   </g>
 </svg>
